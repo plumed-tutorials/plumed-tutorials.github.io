@@ -32,6 +32,25 @@ For more details see [Basic writing and formatting syntax](https://docs.github.c
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/plumed-school/plumed-school.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
+### Can we do equations
+
+$$
+f(x) = \frac{1}{\sqrt{2\pi}\sigma}\exp\left( -\frac{(x-\mu)^2)}{2\sigma^2} \right)
+$$
+
+### What about Python 
+
+Lets write a python program
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+def myfunc(x) : 
+    return x*x
+    
+```
+
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
