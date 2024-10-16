@@ -1,0 +1,144 @@
+# file containing lesson database.
+- id: '23.003'
+  title: Profiling, GPUs and PLUMED
+  shortitle: 'Profiling, GPUs...'
+  path: lessons/23/003/data/NAVIGATION.html
+  instructors: Ketan Bhardwaj
+  doi: unpublished
+  reference: 'unpublished'
+  ref_url: ''
+  description: A report based on some profiling work on PLUMED that has been performed by the SSEC
+  tags: developers, C++, profiling
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  actions: 
+  modules: 
+  time: 3.1281765800000016
+- id: '22.017'
+  title: A Bayesian approach to integrate cryo-EM data into MD simulations with PLUMED
+  shortitle: 'A Bayesian appr...'
+  path: lessons/22/017/data/NAVIGATION.html
+  instructors: Samuel Hoff and Max Bonomi
+  doi: 10.1371/journal.pcbi.1012180
+  reference: 'S. E. Hoff, F. E. Thomasen, K. Lindorff-Larsen, M. Bonomi, Accurate model and ensemble refinement using cryo-electron microscopy maps and Bayesian inference. PLOS Computational Biology. 20, e1012180 (2024)'
+  ref_url: 'http://dx.doi.org/10.1371/journal.pcbi.1012180'
+  description: How to use PLUMED to perform single-structure and ensemble refinement using cryo-EM maps and EMMIVox.
+  tags: masterclass-2022
+  ninputs: 2
+  nfail: 2
+  nfailm: 2
+  depends: 
+    - 21/001
+  actions: GROUP BIASVALUE EMMIVOX WHOLEMOLECULES PRINT MOLINFO
+  modules: isdb bias core generic
+  time: 13.551489254999979
+- id: '22.013'
+  title: SASA module - The solvent accessible surface area of proteins as a collective variable, and the application of PLUMED for implicit solvent simulations
+  shortitle: 'SASA module - T...'
+  path: lessons/22/013/data/NAVIGATION.html
+  instructors: Andrea Arsiccio
+  doi: 10.1021/acs.jpcb.2c00889
+  reference: 'A. Arsiccio, P. Ganguly, J.-E. Shea, A Transfer Free Energy Based Implicit Solvent Model for Protein Simulations in Solvent Mixtures: Urea-Induced Denaturation as a Case Study. The Journal of Physical Chemistry B. 126, 4472–4482 (2022)'
+  ref_url: 'http://dx.doi.org/10.1021/acs.jpcb.2c00889'
+  description: An introduction to the SASA module and a description of how PLUMED can be used for implicit solvent simulations.
+  tags: masterclass-2022
+  ninputs: 4
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/001
+    - 21/004
+  actions: LOWEST LESS_THAN SUM BIASVALUE ALPHARMSD ANTIBETARMSD PARABETARMSD GYRATION PRINT MOLINFO SECONDARY_STRUCTURE_RMSD SASA_HASEL
+  modules: bias sasa generic secondarystructure function colvar
+  time: 22.041440206999994
+- id: '22.012'
+  title: Free energy calculations in crystalline solids
+  shortitle: 'Free energy cal...'
+  path: lessons/22/012/data/NAVIGATION.html
+  instructors: Pablo Piaggi
+  doi: 10.1063/1.5102104
+  reference: 'P. M. Piaggi, M. Parrinello, Calculation of phase diagrams in the multithermal-multibaric ensemble. The Journal of Chemical Physics. 150 (2019)'
+  ref_url: 'http://dx.doi.org/10.1063/1.5102104'
+  description: An introduction to the Environmental similarity CV and the calculation of chemical potentials of liquids and solids
+  tags: masterclass-2022
+  ninputs: 8
+  nfail: 5
+  nfailm: 5
+  depends: 
+    - 21/001
+    - 21/004
+    - 22/003
+  actions: UPPER_WALLS GROUP ENVIRONMENTSIMILARITY HISTOGRAM SUM Q6 DISTANCE_MATRIX MATHEVAL OPES_METAD MEAN CUSTOM DUMPGRID MORE_THAN LOWER_WALLS MATRIX_VECTOR_PRODUCT ONES
+  modules: bias generic adjmat matrixtools envsim gridtools core symfunc function opes
+  time: 30.832136265999964
+- id: '22.011'
+  title: Variationally Enhanced Sampling
+  shortitle: 'Variationally E...'
+  path: lessons/22/011/data/NAVIGATION.html
+  instructors: Omar Valsson
+  doi: 10.1021/acs.jctc.2c00197
+  reference: 'B. Pampel, O. Valsson, Improving the Efficiency of Variationally Enhanced Sampling with Wavelet-Based Bias Potentials. Journal of Chemical Theory and Computation. 18, 4127–4141 (2022)'
+  ref_url: 'http://dx.doi.org/10.1021/acs.jctc.2c00197'
+  description: An introduction to running Variationally Enhanced Sampling (VES) using PLUMED.
+  tags: masterclass-2022 Variationally Enhanced Sampling VES
+  ninputs: 14
+  nfail: 2
+  nfailm: 2
+  actions: UPPER_WALLS READ VES_LINEAR_EXPANSION BF_WAVELETS HISTOGRAM TD_UNIFORM CONVERT_TO_FES TD_WELLTEMPERED COORDINATION OPT_AVERAGED_SGD DISTANCE REWEIGHT_BIAS DUMPGRID PRINT BF_LEGENDRE
+  modules: bias generic ves gridtools colvar
+  time: 87.27480580700006
+- id: '22.007'
+  title: Learning and enhancing fluctuations along information bottleneck for automated enhanced sampling
+  shortitle: 'Learning and en...'
+  path: lessons/22/007/data/NAVIGATION.html
+  instructors: Pratyush Tiwary
+  doi: 10.1021/acs.jctc.2c00058
+  reference: 'S. Mehdi, D. Wang, S. Pant, P. Tiwary, Accelerating All-Atom Simulations and Gaining Mechanistic Understanding of Biophysical Systems through State Predictive Information Bottleneck. Journal of Chemical Theory and Computation. 18, 3231–3238 (2022)'
+  ref_url: 'http://dx.doi.org/10.1021/acs.jctc.2c00058'
+  description: An introduction to the state predictive information bottleneck (SPIB) deep-learning-based framework for learning reaction coordinates from high dimensional molecular simulation trajectories.
+  tags: masterclass-2022
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  actions: 
+  modules: 
+  time: 8.653174777999993
+- id: '22.005'
+  title: Machine learning collective variables with PyTorch
+  shortitle: 'Machine learnin...'
+  path: lessons/22/005/data/NAVIGATION.html
+  instructors: Luigi Bonati
+  doi: 10.1063/5.0156343
+  reference: 'L. Bonati, E. Trizio, A. Rizzi, M. Parrinello, A unified framework for machine learning collective variables for enhanced sampling simulations: <tt>mlcolvar</tt>. The Journal of Chemical Physics. 159 (2023)'
+  ref_url: 'http://dx.doi.org/10.1063/5.0156343'
+  description: An introduction to designing data-driven CVs using two methods (DeepLDA and DeepTICA).
+  tags: masterclass-2022
+  ninputs: 1
+  nfail: 1
+  nfailm: 1
+  depends: 
+    - 21/001
+    - 22/003
+  actions: TORSION PYTORCH_MODEL PRINT
+  modules: pytorch colvar generic
+  time: 21.981322523000017
+- id: '22.003'
+  title: Rethinking Metadynamics using the OPES method
+  shortitle: 'Rethinking Meta...'
+  path: lessons/22/003/data/NAVIGATION.html
+  instructors: Michele Invernizzi
+  doi: 10.1021/acs.jpclett.0c00497
+  reference: 'M. Invernizzi, M. Parrinello, Rethinking Metadynamics: From Bias Potentials to Probability Distributions. The Journal of Physical Chemistry Letters. 11, 2731–2736 (2020)'
+  ref_url: 'http://dx.doi.org/10.1021/acs.jpclett.0c00497'
+  description: An introduction to the On-the-fly Probability Enhanced Sampling method
+  tags: masterclass-2022
+  ninputs: 5
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/003
+    - 21/004
+  actions: ECV_UMBRELLAS_LINE ECV_MULTITHERMAL ENERGY TORSION OPES_EXPANDED OPES_METAD_EXPLORE OPES_METAD
+  modules: colvar opes
+  time: 33.6809234210001

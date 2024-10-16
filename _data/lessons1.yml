@@ -1,0 +1,215 @@
+# file containing lesson database.
+- id: '24.010'
+  title: Modelling mechanobiological processes
+  shortitle: 'Modelling mecha...'
+  path: lessons/24/010/data/NAVIGATION.html
+  instructors: Claire Pritchard, Guillaume Stirnemann and Glen Hocky
+  doi: 10.1021/acs.jpcb.1c10715
+  reference: 'G. Stirnemann, Recent Advances and Emerging Challenges in the Molecular Modeling of Mechanobiological Processes. The Journal of Physical Chemistry B. 126, 1365–1374 (2022)'
+  ref_url: 'http://dx.doi.org/10.1021/acs.jpcb.1c10715'
+  description: A tutorial on modelling mechanobiological processes
+  tags: Metadynamics, pulling, force, rates, GPCR
+  ninputs: 5
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 22/015
+  actions: DUMPATOMS COMMITTOR RESTRAINT MATHEVAL METAD PRINT BIASVALUE UNITS COM DISTANCE
+  modules: vatom generic function colvar setup bias
+  time: 28.39024837599993
+- id: '24.008'
+  title: Using the maze module
+  shortitle: 'Using the maze ...'
+  path: lessons/24/008/data/NAVIGATION.html
+  instructors: Jakub Rydzewski
+  doi: 10.1063/1.5108638
+  reference: 'J. Rydzewski, O. Valsson, Finding multiple reaction pathways of ligand unbinding. The Journal of Chemical Physics. 150 (2019)'
+  ref_url: 'http://dx.doi.org/10.1063/1.5108638'
+  description: Sampling ligand-protein dissociation using the maze module
+  tags: protein, ligand, dissociation, unbinding, maze
+  ninputs: 4
+  nfail: 2
+  nfailm: 2
+  depends: 
+    - 21/001
+  actions: GROUP COMMITTOR CENTER DISTANCE
+  modules: colvar vatom generic core
+  time: 28.465613297999994
+- id: '24.006'
+  title: Standard binding free energies from cylindrical restraints
+  shortitle: 'Standard bindin...'
+  path: lessons/24/006/data/NAVIGATION.html
+  instructors: Blake I Armstrong, Paolo Raiteri and Julian D Gale
+  doi: 10.1021/acs.jpcc.3c02864
+  reference: 'B. I. Armstrong, A. Silvestri, M. De La Pierre, P. Raiteri, J. D. Gale, Determining the Complete Stability of Calcite Kink Sites: Real vs Ideal. The Journal of Physical Chemistry C. 127, 13958–13968 (2023)'
+  ref_url: 'http://dx.doi.org/10.1021/acs.jpcc.3c02864'
+  description: Calculating standard binding free energies with metadynamics, PLUMED and OpenMM
+  tags: metadynamics, surface binding, cylindrical restraint, standard state, volume correction, multiple-walkers
+  ninputs: 9
+  nfail: 1
+  nfailm: 1
+  depends: 
+    - 21/004
+  actions: CUSTOM RESTART METAD FLUSH PRINT BIASVALUE UNITS LOWER_WALLS UPPER_WALLS DISTANCE FIXEDATOM
+  modules: vatom generic function colvar setup bias
+  time: 123.21535177199996
+- id: '24.003'
+  title: Benchmarking PLUMED
+  shortitle: 'Benchmarking PL...'
+  path: lessons/24/003/data/NAVIGATION.html
+  instructors: Daniele Rapetti
+  doi: unpublished
+  reference: 'unpublished'
+  ref_url: ''
+  description: This tutorial shows you how to use the plumed benchmark tool to measure the performance of the code
+  tags: developers, benchmark, manual
+  ninputs: 3
+  nfail: 0
+  nfailm: 3
+  actions: FLUSH PRINT COORDINATION
+  modules: colvar generic
+  time: 38.03129767600001
+- id: '22.015'
+  title: Mechanical pulling + FISST module
+  shortitle: 'Mechanical pull...'
+  path: lessons/22/015/data/NAVIGATION.html
+  instructors: Guillaume Stirnemann and Glen Hocky
+  doi: 10.1063/5.0009280
+  reference: 'M. J. Hartmann, Y. Singh, E. Vanden-Eijnden, G. M. Hocky, Infinite switch simulated tempering in force (FISST). The Journal of Chemical Physics. 152 (2020)'
+  ref_url: 'http://dx.doi.org/10.1063/5.0009280'
+  description: This tutorial explains how mechanical forces can be modeled using PLUMED and the FISST module
+  tags: masterclass-2022
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/001
+  actions: DUMPATOMS RESTRAINT MATHEVAL METAD FISST PRINT BIASVALUE UNITS DISTANCE
+  modules: generic function colvar fisst setup bias
+  time: 46.71458041899996
+- id: '22.010'
+  title: Hamiltonian replica exchange with PLUMED and GROMACS
+  shortitle: 'Hamiltonian rep...'
+  path: lessons/22/010/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  doi: 10.1080/00268976.2013.824126
+  reference: 'G. Bussi, Hamiltonian replica exchange in GROMACS: a flexible implementation. Molecular Physics. 112, 379–384 (2013)'
+  ref_url: 'http://dx.doi.org/10.1080/00268976.2013.824126'
+  description: An introduction to running Hamiltonian replica exchange calculations using PLUMED and GROMACS.
+  tags: masterclass-2022
+  ninputs: 1
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/005
+  actions: PRINT TORSION MOLINFO
+  modules: colvar generic
+  time: 12.092933576000064
+- id: '22.008'
+  title: Modelling Concentration-driven processes with PLUMED
+  shortitle: 'Modelling Conce...'
+  path: lessons/22/008/data/NAVIGATION.html
+  instructors: Matteo Salvalaglio
+  doi: 10.1063/1.4917200
+  reference: 'C. Perego, M. Salvalaglio, M. Parrinello, Molecular dynamics simulations of solutions at constant chemical potential. The Journal of Chemical Physics. 142 (2015)'
+  ref_url: 'http://dx.doi.org/10.1063/1.4917200'
+  description: An introduction to the tools that are available in PLUMED for simulating concentration-driven processes such as nucleation, growth and diffusion.
+  tags: masterclass-2022
+  ninputs: 4
+  nfail: 3
+  nfailm: 3
+  depends: 
+    - 21/001
+  actions: GROUP RESTRAINT MEAN CLUSTER_DISTRIBUTION SUM CONTACT_MATRIX MATRIX_VECTOR_PRODUCT CLUSTER_NATOMS FLUSH PRINT DFSCLUSTERING MORE_THAN ONES COORDINATIONNUMBER
+  modules: adjmat core matrixtools clusters generic function symfunc bias
+  time: 31.656094632999952
+- id: '22.002'
+  title: Analysis of PLUMED output by Metadynminer
+  shortitle: 'Analysis of PLU...'
+  path: lessons/22/002/data/NAVIGATION.html
+  instructors: Vojtech Spiwok
+  doi: 10.32614/RJ-2022-057
+  reference: 'D. Trapl, V. Spiwok, Analysis of the Results of Metadynamics Simulations by metadynminer and metadynminer3d. The R Journal. 14, 46–58 (2022)'
+  ref_url: 'http://dx.doi.org/10.32614/RJ-2022-057'
+  description: An introduction to the R package Metadynminer which can be used to analyse the output from metadynamics simulations
+  tags: masterclass-2022
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/004
+  actions: 
+  modules: 
+  time: 6.483290587000056
+- id: '22.001'
+  title: Funnel Metadynamics
+  shortitle: 'Funnel Metadyna...'
+  path: lessons/22/001/data/NAVIGATION.html
+  instructors: Stefano Raniolo and Vittorio Limongelli
+  doi: 10.1038/s41596-020-0342-4
+  reference: 'S. Raniolo, V. Limongelli, Ligand binding free-energy calculations with funnel metadynamics. Nature Protocols. 15, 2837–2866 (2020)'
+  ref_url: 'http://dx.doi.org/10.1038/s41596-020-0342-4'
+  description: An introduction to modelling ligand binding using funnel metadynamics
+  tags: masterclass-2022 Funnel Metadynamics ligand/target binding
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  actions: 
+  modules: 
+  time: 17.703414519000034
+- id: '21.005'
+  title: Replica exchange methods
+  shortitle: 'Replica exchang...'
+  path: lessons/21/005/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  doi: 10.1016/S0009-2614(99)01123-9
+  reference: 'Y. Sugita, Y. Okamoto, Replica-exchange molecular dynamics method for protein folding. Chemical Physics Letters. 314, 141–151 (1999)'
+  ref_url: 'http://dx.doi.org/10.1016/S0009-2614(99)01123-9'
+  description: Running umbrella sampling with replica exchange, bias exchange metadynamics and parallel tempering metadynamics
+  tags: masterclass-2021
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/003
+    - 21/004
+  actions: TORSION RESTRAINT RANDOM_EXCHANGES METAD PRINT MOLINFO
+  modules: colvar generic bias
+  time: 19.97462009200001
+- id: '21.004'
+  title: Metadynamics
+  shortitle: 'Metadynamics'
+  path: lessons/21/004/data/NAVIGATION.html
+  instructors: Max Bonomi
+  doi: 10.1073/pnas.202427399
+  reference: 'A. Laio, M. Parrinello, Escaping free-energy minima. Proceedings of the National Academy of Sciences. 99, 12562–12566 (2002)'
+  ref_url: 'http://dx.doi.org/10.1073/pnas.202427399'
+  description: How to calculate statistical averages and free energy surfaces using metadynamics
+  tags: masterclass-2021
+  ninputs: 4
+  nfail: 0
+  nfailm: 1
+  depends: 
+    - 21/003
+    - 21/002
+  actions: HISTOGRAM TORSION CONVERT_TO_FES METAD DUMPGRID PRINT REWEIGHT_BIAS MOLINFO
+  modules: gridtools colvar generic bias
+  time: 24.599312417999954
+- id: '21.002'
+  title: Statistical errors in MD
+  shortitle: 'Statistical err...'
+  path: lessons/21/002/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: unpublished
+  reference: 'unpublished'
+  ref_url: ''
+  description: How to calculate errors on averages calculated from unbiased and biased MD simulations using the method of block averages.
+  tags: masterclass-2021
+  ninputs: 8
+  nfail: 0
+  nfailm: 4
+  depends: 
+    - 21/001
+  actions: HISTOGRAM CONSTANT RESTRAINT CUSTOM DISTANCE AVERAGE READ DUMPGRID METAD PRINT UNITS REWEIGHT_BIAS COM UPPER_WALLS CONVERT_TO_FES COORDINATIONNUMBER
+  modules: gridtools vatom generic function colvar symfunc setup bias
+  time: 38.364060666
