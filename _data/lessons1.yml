@@ -1,0 +1,216 @@
+# file containing lesson database.
+- id: '24.009'
+  title: Multiple Walkers Metadynamics Simulations with a Reactive Machine Learning Interatomic Potential
+  shortitle: 'Multiple Walker...'
+  path: lessons/24/009/data/NAVIGATION.html
+  instructors: Kam-Tung Chan and Davide Donadio
+  doi: unpublished
+  reference: 'unpublished'
+  ref_url: ''
+  description: Running metadynamics with a reactive, machine-learning interaction potential
+  tags: metadynamics, nitrate anion, machine learning interatomic potential
+  ninputs: 3
+  nfail: 0
+  nfailm: 3
+  depends: 
+    - 21/001
+    - 21/002
+    - 21/004
+  actions: PRINT UNITS HBOND_MATRIX REWEIGHT_METAD METAD ANGLE DISTANCE GROUP UPPER_WALLS DUMPGRID HISTOGRAM FLUSH CUSTOM READ COORDINATION
+  modules: core adjmat setup generic function gridtools colvar bias
+  time: 20.341939465999985
+- id: '24.006'
+  title: Standard binding free energies from cylindrical restraints
+  shortitle: 'Standard bindin...'
+  path: lessons/24/006/data/NAVIGATION.html
+  instructors: Blake I Armstrong, Paolo Raiteri and Julian D Gale
+  doi: 10.1021/acs.jpcc.3c02864
+  reference: 'B. I. Armstrong, A. Silvestri, M. De La Pierre, P. Raiteri, J. D. Gale, Determining the Complete Stability of Calcite Kink Sites: Real vs Ideal. The Journal of Physical Chemistry C. 127, 13958–13968 (2023)'
+  ref_url: 'http://dx.doi.org/10.1021/acs.jpcc.3c02864'
+  description: Calculating standard binding free energies with metadynamics, PLUMED and OpenMM
+  tags: metadynamics, surface binding, cylindrical restraint, standard state, volume correction, multiple-walkers
+  ninputs: 9
+  nfail: 1
+  nfailm: 1
+  depends: 
+    - 21/004
+  actions: FIXEDATOM LOWER_WALLS UNITS PRINT RESTART METAD BIASVALUE DISTANCE UPPER_WALLS FLUSH CUSTOM
+  modules: setup generic function vatom colvar bias
+  time: 122.4987362899999
+- id: '24.004'
+  title: Volume-based Metadynamics
+  shortitle: 'Volume-based Me...'
+  path: lessons/24/004/data/NAVIGATION.html
+  instructors: Riccardo Capelli
+  doi: 10.1021/acs.jpclett.9b01183
+  reference: 'R. Capelli, P. Carloni, M. Parrinello, Exhaustive Search of Ligand Binding Pathways via Volume-Based Metadynamics. The Journal of Physical Chemistry Letters. 10, 3495–3499 (2019)'
+  ref_url: 'http://dx.doi.org/10.1021/acs.jpclett.9b01183'
+  description: This tutorial teaches you how to run free energy calculations to investigate protein-ligand binding
+  tags: Metadynamics, protein-ligand binding, free energy calculations
+  ninputs: 17
+  nfail: 0
+  nfailm: 1
+  depends: 
+    - 21/001
+    - 21/004
+  actions: RMSD UPPER_WALLS ACCUMULATE READ FIT_TO_TEMPLATE HISTOGRAM CUSTOM COM KDE POSITION WRAPAROUND PRINT METAD REWEIGHT_BIAS GROUP WHOLEMOLECULES MATHEVAL DUMPGRID FLUSH CONVERT_TO_FES RESTRAINT ONES COORDINATION
+  modules: core generic function gridtools colvar vatom bias
+  time: 81.5014003849999
+- id: '24.001'
+  title: hybrid Small Angle Scattering — hands-on guide
+  shortitle: 'hybrid Small An...'
+  path: lessons/24/001/data/NAVIGATION.html
+  instructors: Federico Ballabio
+  doi: 10.1021/acs.jctc.3c00864
+  reference: 'F. Ballabio, C. Paissoni, M. Bollati, M. de Rosa, R. Capelli, C. Camilloni, Accurate and Efficient SAXS/SANS Implementation Including Solvation Layer Effects Suitable for Molecular Simulations. Journal of Chemical Theory and Computation. 19, 8401–8413 (2023)'
+  ref_url: 'http://dx.doi.org/10.1021/acs.jctc.3c00864'
+  description: Practical guide to the use of the hySAS module.
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  actions: PRINT MOLINFO BIASVALUE SAXS GYRATION RESTRAINT STATS ENSEMBLE
+  modules: generic isdb function colvar bias
+  time: 24.490870831000166
+- id: '23.003'
+  title: Profiling, GPUs and PLUMED
+  shortitle: 'Profiling, GPUs...'
+  path: lessons/23/003/data/NAVIGATION.html
+  instructors: Ketan Bhardwaj
+  doi: unpublished
+  reference: 'unpublished'
+  ref_url: ''
+  description: A report based on some profiling work on PLUMED that has been performed by the SSEC
+  tags: developers, C++, profiling
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  actions: 
+  modules: 
+  time: 3.149094555999909
+- id: '22.013'
+  title: SASA module - The solvent accessible surface area of proteins as a collective variable, and the application of PLUMED for implicit solvent simulations
+  shortitle: 'SASA module - T...'
+  path: lessons/22/013/data/NAVIGATION.html
+  instructors: Andrea Arsiccio
+  doi: 10.1021/acs.jpcb.2c00889
+  reference: 'A. Arsiccio, P. Ganguly, J.-E. Shea, A Transfer Free Energy Based Implicit Solvent Model for Protein Simulations in Solvent Mixtures: Urea-Induced Denaturation as a Case Study. The Journal of Physical Chemistry B. 126, 4472–4482 (2022)'
+  ref_url: 'http://dx.doi.org/10.1021/acs.jpcb.2c00889'
+  description: An introduction to the SASA module and a description of how PLUMED can be used for implicit solvent simulations.
+  tags: masterclass-2022
+  ninputs: 4
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/001
+    - 21/004
+  actions: PRINT SECONDARY_STRUCTURE_RMSD LOWEST SUM MOLINFO ALPHARMSD GYRATION LESS_THAN SASA_HASEL PARABETARMSD BIASVALUE ANTIBETARMSD
+  modules: generic sasa secondarystructure function colvar bias
+  time: 21.97680548900007
+- id: '22.010'
+  title: Hamiltonian replica exchange with PLUMED and GROMACS
+  shortitle: 'Hamiltonian rep...'
+  path: lessons/22/010/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  doi: 10.1080/00268976.2013.824126
+  reference: 'G. Bussi, Hamiltonian replica exchange in GROMACS: a flexible implementation. Molecular Physics. 112, 379–384 (2013)'
+  ref_url: 'http://dx.doi.org/10.1080/00268976.2013.824126'
+  description: An introduction to running Hamiltonian replica exchange calculations using PLUMED and GROMACS.
+  tags: masterclass-2022
+  ninputs: 1
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/005
+  actions: TORSION MOLINFO PRINT
+  modules: colvar generic
+  time: 11.571833369999922
+- id: '22.006'
+  title: EDS module and Coarse-Grained directed simulations
+  shortitle: 'EDS module and ...'
+  path: lessons/22/006/data/NAVIGATION.html
+  instructors: Glen Hocky and Andrew White
+  doi: 10.1021/ct500320c
+  reference: 'A. D. White, G. A. Voth, Efficient and Minimal Method to Bias Molecular Simulations with Experimental Data. Journal of Chemical Theory and Computation. 10, 3023–3030 (2014)'
+  ref_url: 'http://dx.doi.org/10.1021/ct500320c'
+  description: This tutorials describes how to bias simulations to agree with experimental data using experiment directed simulation.
+  tags: masterclass-2022
+  ninputs: 4
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/001
+  actions: PRINT MOLINFO DISTANCE MATHEVAL EDS BIASVALUE TORSION
+  modules: generic function colvar eds bias
+  time: 23.070413419000033
+- id: '22.001'
+  title: Funnel Metadynamics
+  shortitle: 'Funnel Metadyna...'
+  path: lessons/22/001/data/NAVIGATION.html
+  instructors: Stefano Raniolo and Vittorio Limongelli
+  doi: 10.1038/s41596-020-0342-4
+  reference: 'S. Raniolo, V. Limongelli, Ligand binding free-energy calculations with funnel metadynamics. Nature Protocols. 15, 2837–2866 (2020)'
+  ref_url: 'http://dx.doi.org/10.1038/s41596-020-0342-4'
+  description: An introduction to modelling ligand binding using funnel metadynamics
+  tags: masterclass-2022 Funnel Metadynamics ligand/target binding
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  actions: 
+  modules: 
+  time: 15.407527998999967
+- id: '21.007'
+  title: Optimizing PLUMED performances
+  shortitle: 'Optimizing PLUM...'
+  path: lessons/21/007/data/NAVIGATION.html
+  instructors: Max Bonomi
+  doi: unpublished
+  reference: 'unpublished'
+  ref_url: ''
+  description: Some lessons on monitoring and improving the performance of PLUMED and gromacs
+  tags: masterclass-2021
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/004
+    - 21/005
+  actions: PRINT METAD RMSD COMBINE DISTANCE GROUP WHOLEMOLECULES DEBUG EFFECTIVE_ENERGY_DRIFT CUSTOM COORDINATION
+  modules: core generic function colvar bias
+  time: 18.819649400000117
+- id: '21.003'
+  title: Umbrella Sampling
+  shortitle: 'Umbrella Sampli...'
+  path: lessons/21/003/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  doi: 10.1016/0021-9991(77)90121-8
+  reference: 'G. M. Torrie, J. P. Valleau, Nonphysical sampling distributions in Monte Carlo free-energy estimation: Umbrella sampling. Journal of Computational Physics. 23, 187–199 (1977)'
+  ref_url: 'http://dx.doi.org/10.1016/0021-9991(77)90121-8'
+  description: How to calculate statistical averages and free energy surfaces using umbrella sampling
+  tags: masterclass-2021
+  ninputs: 5
+  nfail: 0
+  nfailm: 3
+  depends: 
+    - 21/001
+    - 21/002
+  actions: PRINT REWEIGHT_BIAS MOLINFO BIASVALUE RESTRAINT DUMPGRID HISTOGRAM CONVERT_TO_FES CUSTOM TORSION READ
+  modules: generic function gridtools colvar bias
+  time: 25.71778656599986
+- id: '21.002'
+  title: Statistical errors in MD
+  shortitle: 'Statistical err...'
+  path: lessons/21/002/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: unpublished
+  reference: 'unpublished'
+  ref_url: ''
+  description: How to calculate errors on averages calculated from unbiased and biased MD simulations using the method of block averages.
+  tags: masterclass-2021
+  ninputs: 8
+  nfail: 0
+  nfailm: 4
+  depends: 
+    - 21/001
+  actions: PRINT UNITS CONSTANT REWEIGHT_BIAS METAD DISTANCE AVERAGE DUMPGRID HISTOGRAM RESTRAINT UPPER_WALLS COORDINATIONNUMBER CONVERT_TO_FES CUSTOM READ COM
+  modules: setup generic symfunc function gridtools colvar vatom bias
+  time: 37.621919182000056

@@ -1,0 +1,166 @@
+# file containing lesson database.
+- id: '24.008'
+  title: Using the maze module
+  shortitle: 'Using the maze ...'
+  path: lessons/24/008/data/NAVIGATION.html
+  instructors: Jakub Rydzewski
+  doi: 10.1063/1.5108638
+  reference: 'J. Rydzewski, O. Valsson, Finding multiple reaction pathways of ligand unbinding. The Journal of Chemical Physics. 150 (2019)'
+  ref_url: 'http://dx.doi.org/10.1063/1.5108638'
+  description: Sampling ligand-protein dissociation using the maze module
+  tags: protein, ligand, dissociation, unbinding, maze
+  ninputs: 4
+  nfail: 2
+  nfailm: 2
+  depends: 
+    - 21/001
+  actions: CENTER COMMITTOR GROUP DISTANCE
+  modules: colvar vatom generic core
+  time: 28.213079076999975
+- id: '24.007'
+  title: Transition-Tempered Metadynamics
+  shortitle: 'Transition-Temp...'
+  path: lessons/24/007/data/NAVIGATION.html
+  instructors: Jiangbo Wu and Gregory A. Voth
+  doi: 10.1021/ct500441q
+  reference: 'J. F. Dama, G. Rotskoff, M. Parrinello, G. A. Voth, Transition-Tempered Metadynamics: Robust, Convergent Metadynamics via On-the-Fly Transition Barrier Estimation. Journal of Chemical Theory and Computation. 10, 3626–3633 (2014)'
+  ref_url: 'http://dx.doi.org/10.1021/ct500441q'
+  description: An introduction to the transition tempered metadynamics method
+  tags: metadynamics, free energy sampling, reaction mechanism
+  ninputs: 3
+  nfail: 2
+  nfailm: 2
+  depends: 
+    - 21/004
+  actions: LOWER_WALLS RESTART GROUP DISTANCE WHOLEMOLECULES MOLINFO PRINT UNITS COM UPPER_WALLS COORDINATION EXTENDED_LAGRANGIAN METAD RESTRAINT FLUSH TORSION
+  modules: generic setup colvar bias vatom core
+  time: 20.187533893000136
+- id: '24.005'
+  title: Path integral metadynamics
+  shortitle: 'Path integral m...'
+  path: lessons/24/005/data/NAVIGATION.html
+  instructors: Michele Ceriotti
+  doi: 10.1063/5.0215869
+  reference: 'Y. Litman, V. Kapil, Y. M. Y. Feldman, D. Tisi, T. Begušić, K. Fidanyan, G. Fraux, J. Higer, M. Kellner, T. E. Li, E. S. Pós, E. Stocco, G. Trenins, B. Hirshberg, M. Rossi, M. Ceriotti, i-PI 3.0: A flexible and efficient framework for advanced atomistic simulations. The Journal of Chemical Physics. 161 (2024)'
+  ref_url: 'http://dx.doi.org/10.1063/5.0215869'
+  description: Incorporating nuclear quantum effects in metadynamics simulations using path integrals
+  tags: Metadynamics, path integrals, nuclear quantum effects
+  ninputs: 1
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21.001
+    - 21.004
+  actions: DISTANCES GROUP DISTANCE CENTER PRINT UPPER_WALLS SUM METAD COMBINE LESS_THAN FLUSH
+  modules: generic colvar multicolvar bias vatom function core
+  time: 8.052561231000027
+- id: '23.004'
+  title: Rewriting coordination CVs in CUDA
+  shortitle: 'Rewriting coord...'
+  path: lessons/23/004/data/NAVIGATION.html
+  instructors: Daniele Rapetti
+  doi: unpublished
+  reference: 'unpublished'
+  ref_url: ''
+  description: How to implement a basic version of the coordination CV with CUDA
+  tags: developers, C++, parallelism, Cuda
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  actions: 
+  modules: 
+  time: 10.262173749000112
+- id: '22.012'
+  title: Free energy calculations in crystalline solids
+  shortitle: 'Free energy cal...'
+  path: lessons/22/012/data/NAVIGATION.html
+  instructors: Pablo Piaggi
+  doi: 10.1063/1.5102104
+  reference: 'P. M. Piaggi, M. Parrinello, Calculation of phase diagrams in the multithermal-multibaric ensemble. The Journal of Chemical Physics. 150 (2019)'
+  ref_url: 'http://dx.doi.org/10.1063/1.5102104'
+  description: An introduction to the Environmental similarity CV and the calculation of chemical potentials of liquids and solids
+  tags: masterclass-2022
+  ninputs: 8
+  nfail: 5
+  nfailm: 5
+  depends: 
+    - 21/001
+    - 21/004
+    - 22/003
+  actions: MATRIX_VECTOR_PRODUCT LOWER_WALLS ENVIRONMENTSIMILARITY GROUP CUSTOM MORE_THAN MEAN ONES OPES_METAD Q6 DISTANCE_MATRIX UPPER_WALLS DUMPGRID HISTOGRAM SUM MATHEVAL
+  modules: symfunc generic gridtools envsim matrixtools adjmat opes bias function core
+  time: 31.81807683000011
+- id: '22.008'
+  title: Modelling Concentration-driven processes with PLUMED
+  shortitle: 'Modelling Conce...'
+  path: lessons/22/008/data/NAVIGATION.html
+  instructors: Matteo Salvalaglio
+  doi: 10.1063/1.4917200
+  reference: 'C. Perego, M. Salvalaglio, M. Parrinello, Molecular dynamics simulations of solutions at constant chemical potential. The Journal of Chemical Physics. 142 (2015)'
+  ref_url: 'http://dx.doi.org/10.1063/1.4917200'
+  description: An introduction to the tools that are available in PLUMED for simulating concentration-driven processes such as nucleation, growth and diffusion.
+  tags: masterclass-2022
+  ninputs: 4
+  nfail: 3
+  nfailm: 3
+  depends: 
+    - 21/001
+  actions: MATRIX_VECTOR_PRODUCT GROUP MEAN MORE_THAN COORDINATIONNUMBER ONES PRINT CLUSTER_NATOMS CONTACT_MATRIX DFSCLUSTERING CLUSTER_DISTRIBUTION SUM FLUSH RESTRAINT
+  modules: symfunc generic matrixtools adjmat bias clusters function core
+  time: 31.19811823799978
+- id: '22.003'
+  title: Rethinking Metadynamics using the OPES method
+  shortitle: 'Rethinking Meta...'
+  path: lessons/22/003/data/NAVIGATION.html
+  instructors: Michele Invernizzi
+  doi: 10.1021/acs.jpclett.0c00497
+  reference: 'M. Invernizzi, M. Parrinello, Rethinking Metadynamics: From Bias Potentials to Probability Distributions. The Journal of Physical Chemistry Letters. 11, 2731–2736 (2020)'
+  ref_url: 'http://dx.doi.org/10.1021/acs.jpclett.0c00497'
+  description: An introduction to the On-the-fly Probability Enhanced Sampling method
+  tags: masterclass-2022
+  ninputs: 5
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/003
+    - 21/004
+  actions: ENERGY OPES_METAD OPES_METAD_EXPLORE OPES_EXPANDED TORSION ECV_MULTITHERMAL ECV_UMBRELLAS_LINE
+  modules: opes colvar
+  time: 34.40560663699989
+- id: '21.006'
+  title: Dimensionality reduction
+  shortitle: 'Dimensionality ...'
+  path: lessons/21/006/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: 10.1063/1.2432340
+  reference: 'D. Branduardi, F. L. Gervasio, M. Parrinello, From A to B in free energy space. The Journal of Chemical Physics. 126 (2007)'
+  ref_url: 'http://dx.doi.org/10.1063/1.2432340'
+  description: An introduction to techniques such as dimensionality reduction, path collective variables, and indistinguishability that you may need to use in your own research projects.
+  tags: masterclass-2021
+  ninputs: 11
+  nfail: 6
+  nfailm: 1
+  depends: 
+    - 21/001
+  actions: ALPHARMSD PARABETARMSD DUMPVECTOR CLASSICAL_MDS FCCUBIC PCAVARS DUMPPDB UNITS SKETCHMAP DUMPGRID PROJECT_POINTS TORSION ANTIBETARMSD COLLECT_FRAMES MOLINFO COORDINATIONNUMBER PRINT DUMPMULTICOLVAR HISTOGRAM COMMITTOR PATH GROUP MORE_THAN PCA LANDMARK_SELECT_FPS RMSD
+  modules: symfunc generic mapping gridtools setup dimred colvar multicolvar secondarystructure landmarks function core
+  time: 56.38643690399999
+- id: '21.005'
+  title: Replica exchange methods
+  shortitle: 'Replica exchang...'
+  path: lessons/21/005/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  doi: 10.1016/S0009-2614(99)01123-9
+  reference: 'Y. Sugita, Y. Okamoto, Replica-exchange molecular dynamics method for protein folding. Chemical Physics Letters. 314, 141–151 (1999)'
+  ref_url: 'http://dx.doi.org/10.1016/S0009-2614(99)01123-9'
+  description: Running umbrella sampling with replica exchange, bias exchange metadynamics and parallel tempering metadynamics
+  tags: masterclass-2021
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  depends: 
+    - 21/003
+    - 21/004
+  actions: RANDOM_EXCHANGES MOLINFO PRINT RESTRAINT METAD TORSION
+  modules: colvar generic bias
+  time: 19.265113548000045
