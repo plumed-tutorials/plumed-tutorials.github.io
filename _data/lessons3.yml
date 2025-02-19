@@ -1,0 +1,21 @@
+# file containing lesson database.
+- id: '23.001'
+  title: Developments in PLUMED
+  shortitle: Developments in...
+  path: lessons/23/001/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: A series of articles were I outline some development work that I have been doing with PLUMED over the last few years
+  ninputs: 100
+  nfail: 87
+  nfailm: 1
+  inputfails:
+    v2.9: 87
+    master: 1
+  actions: CUSTOM SORT PRINT COORDINATIONNUMBER RMSD KDE INTERPOLATE_GRID LOCAL_AVERAGE SELECT_COMPONENTS SPHERICAL_HARMONIC DISTANCE_MATRIX DISTANCES MATRIX_PRODUCT REFERENCE_GRID RMSD_VECTOR VSTACK PCAVARS DFSCLUSTERING CONTACT_MATRIX ONES BIASVALUE PATH FIXEDATOM
+    MEAN WHOLEMOLECULES LOWEST Q1 ACCUMULATE CLUSTER_PROPERTIES CONCATENATE Q6 LOCAL_Q1 COM DIFFERENCE GEOMETRIC_PATH GATHER_REPLICAS MATRIX_VECTOR_PRODUCT CLUSTER_WEIGHTS TORSION Q4 HISTOGRAM DISPLACEMENT RESTRAINT PDB2CONSTANT DIAGONALIZE DOMAIN_DECOMPOSITION
+    INTEGRATE_GRID POSITION LESS_THAN INSPHERE TRANSPOSE DUMPGRID MORE_THAN CENTER AVERAGE OUTER_PRODUCT SUM DISTANCE COMBINE VOLUME EUCLIDEAN_DISTANCE PAIRENTROPY SPRINT RDF GPATH CONSTANT GROUP GSYMFUNC_THREEBODY
+  modules: generic adjmat volumes sprint matrixtools vatom function colvar mapping gridtools refdist bias multicolvar symfunc core valtools clusters
+  time: 467.43019641999996

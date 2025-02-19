@@ -1,0 +1,338 @@
+# file containing lesson database.
+- id: '25.001'
+  title: VisMetaDynamics
+  shortitle: VisMetaDynamics
+  path: lessons/25/001/data/NAVIGATION.html
+  instructors: Christian Phillips
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: A graphical tool that allows you to visually inspect how the free energy surface for a metadynamics simulation is affected by the choice of hyperparameters
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/004
+  actions: ''
+  modules: ''
+  time: 1.9296251909999853
+- id: '24.015'
+  title: How to use the PLUMED PyCV plugin
+  shortitle: How to use the ...
+  path: lessons/24/015/data/NAVIGATION.html
+  instructors: Daniele Rapetti, Toni Giorgino
+  doi: 10.21105/joss.01773
+  reference: 'T. Giorgino, PYCV: a PLUMED 2 Module Enabling the Rapid Prototyping of Collective Variables in Python. Journal of Open Source Software. 4, 1773 (2019)'
+  ref_url: http://dx.doi.org/10.21105/joss.01773
+  description: An introduction to the pycv module.  This module provides you with an action that allows you to call python from PLUMED.
+  tags: manual, python
+  ninputs: 7
+  nfail: 7
+  nfailm: 7
+  inputfails:
+    v2.9: 7
+    master: 7
+  actions: PRINT DISTANCE LOAD
+  modules: generic setup colvar
+  time: 24.899036634999987
+- id: '24.014'
+  title: Alpha-Fold Metainference for structural ensemble prediction of a partially disordered protein
+  shortitle: Alpha-Fold Meta...
+  path: lessons/24/014/data/NAVIGATION.html
+  instructors: Faidon Brotzakis, Hussein Murtada and Michele Vendruscolo
+  doi: 10.1101/2023.01.19.524720
+  reference: Z. F. Brotzakis, S. Zhang, M. Vendruscolo, AlphaFold Prediction of Structural Ensembles of Disordered Proteins (2023)
+  ref_url: http://dx.doi.org/10.1101/2023.01.19.524720
+  description: A tutorial about how metainference can be used in tandem with Alpha-fold to predict the ensemble of structures for a partially disordered protein.
+  tags: Protein dynamics, AlphaFold2, Metainference, PB-MetaD, CALVADOS2, partially disordered proteins
+  ninputs: 2
+  nfail: 1
+  nfailm: 1
+  inputfails:
+    v2.9: 1
+    master: 1
+  depends:
+  - 21/001
+  actions: CONSTANT MOLINFO GYRATION FLUSH TORSION PRINT CONTACTMAP METAINFERENCE CENTER ENDPLUMED WHOLEMOLECULES RMSD UPPER_WALLS PBMETAD
+  modules: vatom isdb bias generic colvar
+  time: 4.91094188400001
+- id: '24.012'
+  title: Exploring Free Energy Surfaces with MACE-PLUMED Metadynamics
+  shortitle: Exploring Free ...
+  path: lessons/24/012/data/NAVIGATION.html
+  instructors: S.G.H. Brookes, C. Schran, A. Michaelides
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: Performing metadynamics simulations with LAMMPS, MACE and PLUMED
+  tags: metadynamics, machine learning
+  ninputs: 1
+  nfail: 1
+  nfailm: 1
+  inputfails:
+    v2.9: 1
+    master: 1
+  depends:
+  - 21/004
+  actions: UNITS PRINT
+  modules: generic setup
+  time: 4.122775594999979
+- id: '24.011'
+  title: Parameterization of Path CVs for drug-target binding
+  shortitle: Parameterizatio...
+  path: lessons/24/011/data/NAVIGATION.html
+  instructors: Mattia Bernetti and Matteo Masetti
+  doi: 10.1021/acs.jctc.9b00450
+  reference: "M. Bernetti, M. Masetti, M. Recanatini, R. E. Amaro, A. Cavalli, An Integrated Markov State Model and Path Metadynamics Approach To Characterize Drug Binding Processes. Journal of Chemical Theory and Computation. 15, 5689\u20135702 (2019)"
+  ref_url: http://dx.doi.org/10.1021/acs.jctc.9b00450
+  description: Using path CVs to study drug target binding with metadynamics
+  tags: drug-target binding, Path CVs, metadynamics
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/001
+  - 21/004
+  actions: LOWER_WALLS MOLINFO METAD PATHMSD PRINT CENTER DISTANCE WHOLEMOLECULES MOVINGRESTRAINT UPPER_WALLS
+  modules: vatom generic colvar bias
+  time: 24.60404489000001
+- id: '22.017'
+  title: A Bayesian approach to integrate cryo-EM data into MD simulations with PLUMED
+  shortitle: A Bayesian appr...
+  path: lessons/22/017/data/NAVIGATION.html
+  instructors: Samuel Hoff and Max Bonomi
+  doi: 10.1371/journal.pcbi.1012180
+  reference: S. E. Hoff, F. E. Thomasen, K. Lindorff-Larsen, M. Bonomi, Accurate model and ensemble refinement using cryo-electron microscopy maps and Bayesian inference. PLOS Computational Biology. 20, e1012180 (2024)
+  ref_url: http://dx.doi.org/10.1371/journal.pcbi.1012180
+  description: How to use PLUMED to perform single-structure and ensemble refinement using cryo-EM maps and EMMIVox.
+  tags: masterclass-2022
+  ninputs: 2
+  nfail: 2
+  nfailm: 2
+  inputfails:
+    v2.9: 2
+    master: 2
+  depends:
+  - 21/001
+  actions: MOLINFO EMMIVOX PRINT WHOLEMOLECULES BIASVALUE GROUP
+  modules: isdb generic core bias
+  time: 8.807956305999994
+- id: '22.012'
+  title: Free energy calculations in crystalline solids
+  shortitle: Free energy cal...
+  path: lessons/22/012/data/NAVIGATION.html
+  instructors: Pablo Piaggi
+  doi: 10.1063/1.5102104
+  reference: P. M. Piaggi, M. Parrinello, Calculation of phase diagrams in the multithermal-multibaric ensemble. The Journal of Chemical Physics. 150 (2019)
+  ref_url: http://dx.doi.org/10.1063/1.5102104
+  description: An introduction to the Environmental similarity CV and the calculation of chemical potentials of liquids and solids
+  tags: masterclass-2022
+  ninputs: 8
+  nfail: 5
+  nfailm: 5
+  inputfails:
+    v2.9: 5
+    master: 5
+  depends:
+  - 21/001
+  - 21/004
+  - 22/003
+  actions: CUSTOM LOWER_WALLS UPPER_WALLS SUM MORE_THAN OPES_METAD DUMPGRID MATHEVAL HISTOGRAM DISTANCE_MATRIX MEAN Q6 MATRIX_VECTOR_PRODUCT ENVIRONMENTSIMILARITY GROUP ONES
+  modules: core adjmat opes generic gridtools bias envsim function matrixtools symfunc
+  time: 33.36509814699997
+- id: '22.009'
+  title: Using path collective variables to find reaction mechanisms in complex free energy landscapes
+  shortitle: Using path coll...
+  path: lessons/22/009/data/NAVIGATION.html
+  instructors: Bernd Ensing
+  doi: 10.1103/PhysRevLett.109.020601
+  reference: "G. D\xEDaz Leines, B. Ensing, Path Finding on High-Dimensional Free Energy Landscapes. Physical Review Letters. 109 (2012)"
+  ref_url: http://dx.doi.org/10.1103/PhysRevLett.109.020601
+  description: An introduction to using path collective variables for describing and simulating activated molecular processes
+  tags: masterclass-2022
+  ninputs: 1
+  nfail: 1
+  nfailm: 1
+  inputfails:
+    v2.9: 1
+    master: 1
+  depends:
+  - 21/001
+  actions: LOWER_WALLS METAD PRINT DISTANCE UNITS UPPER_WALLS
+  modules: generic setup colvar bias
+  time: 5.894408762000012
+- id: '22.007'
+  title: Learning and enhancing fluctuations along information bottleneck for automated enhanced sampling
+  shortitle: Learning and en...
+  path: lessons/22/007/data/NAVIGATION.html
+  instructors: Pratyush Tiwary
+  doi: 10.1021/acs.jctc.2c00058
+  reference: "S. Mehdi, D. Wang, S. Pant, P. Tiwary, Accelerating All-Atom Simulations and Gaining Mechanistic Understanding of Biophysical Systems through State Predictive Information Bottleneck. Journal of Chemical Theory and Computation. 18, 3231\u20133238\
+    \ (2022)"
+  ref_url: http://dx.doi.org/10.1021/acs.jctc.2c00058
+  description: An introduction to the state predictive information bottleneck (SPIB) deep-learning-based framework for learning reaction coordinates from high dimensional molecular simulation trajectories.
+  tags: masterclass-2022
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 5.809258731
+- id: '22.005'
+  title: Machine learning collective variables with PyTorch
+  shortitle: Machine learnin...
+  path: lessons/22/005/data/NAVIGATION.html
+  instructors: Luigi Bonati
+  doi: 10.1063/5.0156343
+  reference: 'L. Bonati, E. Trizio, A. Rizzi, M. Parrinello, A unified framework for machine learning collective variables for enhanced sampling simulations: <tt>mlcolvar</tt>. The Journal of Chemical Physics. 159 (2023)'
+  ref_url: http://dx.doi.org/10.1063/5.0156343
+  description: An introduction to designing data-driven CVs using two methods (DeepLDA and DeepTICA).
+  tags: masterclass-2022
+  ninputs: 1
+  nfail: 1
+  nfailm: 1
+  inputfails:
+    v2.9: 1
+    master: 1
+  depends:
+  - 21/001
+  - 22/003
+  actions: PYTORCH_MODEL PRINT TORSION
+  modules: pytorch generic colvar
+  time: 17.716316941000002
+- id: '22.002'
+  title: Analysis of PLUMED output by Metadynminer
+  shortitle: Analysis of PLU...
+  path: lessons/22/002/data/NAVIGATION.html
+  instructors: Vojtech Spiwok
+  doi: 10.32614/RJ-2022-057
+  reference: "D. Trapl, V. Spiwok, Analysis of the Results of Metadynamics Simulations by metadynminer and metadynminer3d. The R Journal. 14, 46\u201358 (2022)"
+  ref_url: http://dx.doi.org/10.32614/RJ-2022-057
+  description: An introduction to the R package Metadynminer which can be used to analyse the output from metadynamics simulations
+  tags: masterclass-2022
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/004
+  actions: ''
+  modules: ''
+  time: 1.0684590920000119
+- id: '22.001'
+  title: Funnel Metadynamics
+  shortitle: Funnel Metadyna...
+  path: lessons/22/001/data/NAVIGATION.html
+  instructors: Stefano Raniolo and Vittorio Limongelli
+  doi: 10.1038/s41596-020-0342-4
+  reference: "S. Raniolo, V. Limongelli, Ligand binding free-energy calculations with funnel metadynamics. Nature Protocols. 15, 2837\u20132866 (2020)"
+  ref_url: http://dx.doi.org/10.1038/s41596-020-0342-4
+  description: An introduction to modelling ligand binding using funnel metadynamics
+  tags: masterclass-2022 Funnel Metadynamics ligand/target binding
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 9.860061832999975
+- id: '21.007'
+  title: Optimizing PLUMED performances
+  shortitle: Optimizing PLUM...
+  path: lessons/21/007/data/NAVIGATION.html
+  instructors: Max Bonomi
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: Some lessons on monitoring and improving the performance of PLUMED and gromacs
+  tags: masterclass-2021
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/004
+  - 21/005
+  actions: CUSTOM DEBUG METAD COMBINE COORDINATION PRINT EFFECTIVE_ENERGY_DRIFT DISTANCE WHOLEMOLECULES RMSD GROUP
+  modules: generic bias function colvar core
+  time: 16.471323736000045
+- id: '21.006'
+  title: Dimensionality reduction
+  shortitle: Dimensionality ...
+  path: lessons/21/006/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: 10.1063/1.2432340
+  reference: D. Branduardi, F. L. Gervasio, M. Parrinello, From A to B in free energy space. The Journal of Chemical Physics. 126 (2007)
+  ref_url: http://dx.doi.org/10.1063/1.2432340
+  description: An introduction to techniques such as dimensionality reduction, path collective variables, and indistinguishability that you may need to use in your own research projects.
+  tags: masterclass-2021
+  ninputs: 11
+  nfail: 6
+  nfailm: 1
+  inputfails:
+    v2.9: 6
+    master: 1
+  depends:
+  - 21/001
+  actions: MORE_THAN DUMPPDB UNITS PCA TORSION PROJECT_POINTS DUMPVECTOR ANTIBETARMSD LANDMARK_SELECT_FPS MOLINFO DUMPGRID SKETCHMAP PRINT PCAVARS HISTOGRAM COMMITTOR PARABETARMSD CLASSICAL_MDS GROUP DUMPMULTICOLVAR COORDINATIONNUMBER ALPHARMSD COLLECT_FRAMES
+    PATH FCCUBIC RMSD
+  modules: mapping symfunc dimred generic gridtools multicolvar setup secondarystructure landmarks function colvar core
+  time: 53.843448920000014
+- id: '21.003'
+  title: Umbrella Sampling
+  shortitle: Umbrella Sampli...
+  path: lessons/21/003/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  doi: 10.1016/0021-9991(77)90121-8
+  reference: "G. M. Torrie, J. P. Valleau, Nonphysical sampling distributions in Monte Carlo free-energy estimation: Umbrella sampling. Journal of Computational Physics. 23, 187\u2013199 (1977)"
+  ref_url: http://dx.doi.org/10.1016/0021-9991(77)90121-8
+  description: How to calculate statistical averages and free energy surfaces using umbrella sampling
+  tags: masterclass-2021
+  ninputs: 5
+  nfail: 0
+  nfailm: 3
+  inputfails:
+    v2.9: 0
+    master: 3
+  depends:
+  - 21/001
+  - 21/002
+  actions: CUSTOM MOLINFO TORSION DUMPGRID RESTRAINT HISTOGRAM PRINT CONVERT_TO_FES READ BIASVALUE REWEIGHT_BIAS
+  modules: generic gridtools bias function colvar
+  time: 25.145975848999967
+- id: '21.002'
+  title: Statistical errors in MD
+  shortitle: Statistical err...
+  path: lessons/21/002/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: How to calculate errors on averages calculated from unbiased and biased MD simulations using the method of block averages.
+  tags: masterclass-2021
+  ninputs: 8
+  nfail: 0
+  nfailm: 4
+  inputfails:
+    v2.9: 0
+    master: 4
+  depends:
+  - 21/001
+  actions: CUSTOM REWEIGHT_BIAS CONSTANT COM METAD DUMPGRID RESTRAINT HISTOGRAM PRINT AVERAGE CONVERT_TO_FES COORDINATIONNUMBER READ DISTANCE UNITS UPPER_WALLS
+  modules: vatom generic gridtools setup bias function colvar symfunc
+  time: 39.27446790099998
