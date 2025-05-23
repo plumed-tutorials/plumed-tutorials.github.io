@@ -1,0 +1,106 @@
+# file containing lesson database.
+- id: '24.005'
+  title: Path integral metadynamics
+  shortitle: Path integral m...
+  path: lessons/24/005/data/NAVIGATION.html
+  instructors: Guillaume Fraux and Michele Ceriotti
+  doi: 10.1063/5.0215869
+  reference: "Y. Litman, V. Kapil, Y. M. Y. Feldman, D. Tisi, T. Begu\u0161i\u0107, K. Fidanyan, G. Fraux, J. Higer, M. Kellner, T. E. Li, E. S. P\xF3s, E. Stocco, G. Trenins, B. Hirshberg, M. Rossi, M. Ceriotti, i-PI 3.0: A flexible and efficient framework\
+    \ for advanced atomistic simulations. The Journal of Chemical Physics. 161 (2024)"
+  ref_url: http://dx.doi.org/10.1063/5.0215869
+  description: Incorporating nuclear quantum effects in metadynamics simulations using path integrals
+  tags: Metadynamics, path integrals, nuclear quantum effects
+  ninputs: 1
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - '21.001'
+  - '21.004'
+  actions: METAD PRINT DISTANCE DISTANCES UPPER_WALLS SUM LESS_THAN COMBINE FLUSH
+  modules: generic bias function multicolvar colvar
+  time: 7.673185248999971
+- id: '23.003'
+  title: Profiling, GPUs and PLUMED
+  shortitle: Profiling, GPUs...
+  path: lessons/23/003/data/NAVIGATION.html
+  instructors: Ketan Bhardwaj
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: A report based on some profiling work on PLUMED that has been performed by the SSEC
+  tags: developers, C++, profiling
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 2.117245323999896
+- id: '23.001'
+  title: Developments in PLUMED
+  shortitle: Developments in...
+  path: lessons/23/001/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: A series of articles were I outline some development work that I have been doing with PLUMED over the last few years
+  ninputs: 100
+  nfail: 76
+  nfailm: 1
+  inputfails:
+    v2.9: 76
+    master: 1
+  actions: CONTACT_MATRIX LOWEST MATRIX_VECTOR_PRODUCT CUSTOM DIFFERENCE BIASVALUE INTERPOLATE_GRID SORT REFERENCE_GRID RMSD_VECTOR ONES LESS_THAN CONSTANT WHOLEMOLECULES PDB2CONSTANT CONCATENATE CLUSTER_PROPERTIES COMBINE PCAVARS VSTACK SPRINT PRINT CENTER
+    COORDINATIONNUMBER DISPLACEMENT FIXEDATOM KDE LOCAL_AVERAGE LOCAL_Q1 VOLUME AVERAGE DUMPGRID GPATH DOMAIN_DECOMPOSITION Q1 PATH INTEGRATE_GRID DIAGONALIZE Q4 SELECT_COMPONENTS SPHERICAL_HARMONIC MEAN RESTRAINT DISTANCES MATRIX_PRODUCT DFSCLUSTERING EUCLIDEAN_DISTANCE
+    MORE_THAN SUM HISTOGRAM GEOMETRIC_PATH COM CLUSTER_WEIGHTS POSITION GATHER_REPLICAS DISTANCE_MATRIX Q6 GSYMFUNC_THREEBODY DISTANCE OUTER_PRODUCT TRANSPOSE PAIRENTROPY RDF INSPHERE TORSION GROUP ACCUMULATE RMSD
+  modules: mapping refdist core function valtools adjmat matrixtools gridtools sprint symfunc volumes vatom generic bias clusters multicolvar colvar
+  time: 442.58770472800006
+- id: '22.003'
+  title: Rethinking Metadynamics using the OPES method
+  shortitle: Rethinking Meta...
+  path: lessons/22/003/data/NAVIGATION.html
+  instructors: Michele Invernizzi
+  doi: 10.1021/acs.jpclett.0c00497
+  reference: "M. Invernizzi, M. Parrinello, Rethinking Metadynamics: From Bias Potentials to Probability Distributions. The Journal of Physical Chemistry Letters. 11, 2731\u20132736 (2020)"
+  ref_url: http://dx.doi.org/10.1021/acs.jpclett.0c00497
+  description: An introduction to the On-the-fly Probability Enhanced Sampling method
+  tags: masterclass-2022
+  ninputs: 5
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/003
+  - 21/004
+  actions: ECV_MULTITHERMAL OPES_METAD_EXPLORE OPES_METAD ENERGY TORSION OPES_EXPANDED ECV_UMBRELLAS_LINE
+  modules: opes colvar
+  time: 35.80069040600006
+- id: '22.002'
+  title: Analysis of PLUMED output by Metadynminer
+  shortitle: Analysis of PLU...
+  path: lessons/22/002/data/NAVIGATION.html
+  instructors: Vojtech Spiwok
+  doi: 10.32614/RJ-2022-057
+  reference: "D. Trapl, V. Spiwok, Analysis of the Results of Metadynamics Simulations by metadynminer and metadynminer3d. The R Journal. 14, 46\u201358 (2022)"
+  ref_url: http://dx.doi.org/10.32614/RJ-2022-057
+  description: An introduction to the R package Metadynminer which can be used to analyse the output from metadynamics simulations
+  tags: masterclass-2022
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/004
+  actions: ''
+  modules: ''
+  time: 4.394420948000061

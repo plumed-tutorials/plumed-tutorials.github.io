@@ -1,0 +1,30 @@
+Stderr for source:  histograms.md_working_11.dat   
+Download: [zipped raw stdout](histograms.md_working_11.dat.plumed.stdout.txt.zip) - [zipped raw stderr](histograms.md_working_11.dat.plumed.stderr.txt.zip) 
+{% raw %}
+<pre>
+#! Only the first 1000 rows of the error file are shown below
+#! To inspect the full error file, please download the zipped raw stderr file above
+terminate called after throwing an instance of 'PLMD::Plumed::ExceptionError'
+what():
+(core/PlumedMain.cpp:903) void PLMD::PlumedMain::readInputWords(const std::vector<std::__cxx11::basic_string<char> >&)
+ERROR
+I cannot understand line: KDE LABEL=hA_kde ARG=x GRID_MIN=0.0 GRID_MAX=3.0 GRID_BIN=100 BANDWIDTH=0.1 HEIGHTS=one
+Maybe a missing space or a typo?
+[pkrvmf6wy0o8zjz:61156] *** Process received signal ***
+[pkrvmf6wy0o8zjz:61156] Signal: Aborted (6)
+[pkrvmf6wy0o8zjz:61156] Signal code:  (-6)
+[pkrvmf6wy0o8zjz:61156] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x45330)[0x7f10ac445330]
+[pkrvmf6wy0o8zjz:61156] [ 1] /lib/x86_64-linux-gnu/libc.so.6(pthread_kill+0x11c)[0x7f10ac49eb2c]
+[pkrvmf6wy0o8zjz:61156] [ 2] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x1e)[0x7f10ac44527e]
+[pkrvmf6wy0o8zjz:61156] [ 3] /lib/x86_64-linux-gnu/libc.so.6(abort+0xdf)[0x7f10ac4288ff]
+[pkrvmf6wy0o8zjz:61156] [ 4] /lib/x86_64-linux-gnu/libstdc++.so.6(+0xa5ff5)[0x7f10ac8a5ff5]
+[pkrvmf6wy0o8zjz:61156] [ 5] /lib/x86_64-linux-gnu/libstdc++.so.6(+0xbb0da)[0x7f10ac8bb0da]
+[pkrvmf6wy0o8zjz:61156] [ 6] /lib/x86_64-linux-gnu/libstdc++.so.6(_ZSt10unexpectedv+0x0)[0x7f10ac8a5a55]
+[pkrvmf6wy0o8zjz:61156] [ 7] /lib/x86_64-linux-gnu/libstdc++.so.6(+0xa5a6f)[0x7f10ac8a5a6f]
+[pkrvmf6wy0o8zjz:61156] [ 8] plumed(+0x13209)[0x5630cd82f209]
+[pkrvmf6wy0o8zjz:61156] [ 9] /lib/x86_64-linux-gnu/libc.so.6(+0x2a1ca)[0x7f10ac42a1ca]
+[pkrvmf6wy0o8zjz:61156] [10] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x8b)[0x7f10ac42a28b]
+[pkrvmf6wy0o8zjz:61156] [11] plumed(+0x134a5)[0x5630cd82f4a5]
+[pkrvmf6wy0o8zjz:61156] *** End of error message ***
+</pre>
+{% endraw %}
