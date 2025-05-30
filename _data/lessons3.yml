@@ -1,0 +1,64 @@
+# file containing lesson database.
+- id: '24.010'
+  title: Modelling mechanobiological processes
+  shortitle: Modelling mecha...
+  path: lessons/24/010/data/NAVIGATION.html
+  instructors: Claire Pritchard, Guillaume Stirnemann and Glen Hocky
+  doi: 10.1021/acs.jpcb.1c10715
+  reference: "G. Stirnemann, Recent Advances and Emerging Challenges in the Molecular Modeling of Mechanobiological Processes. The Journal of Physical Chemistry B. 126, 1365\u20131374 (2022)"
+  ref_url: http://dx.doi.org/10.1021/acs.jpcb.1c10715
+  description: A tutorial on modelling mechanobiological processes
+  tags: Metadynamics, pulling, force, rates, GPCR
+  ninputs: 5
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 22/015
+  actions: COMMITTOR RESTRAINT DISTANCE PRINT DUMPATOMS COM MATHEVAL BIASVALUE METAD UNITS
+  modules: colvar bias vatom function generic setup
+  time: 29.22495475000005
+- id: '23.001'
+  title: Developments in PLUMED
+  shortitle: Developments in...
+  path: lessons/23/001/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: A series of articles were I outline some development work that I have been doing with PLUMED over the last few years
+  ninputs: 100
+  nfail: 76
+  nfailm: 2
+  inputfails:
+    v2.9: 76
+    master: 2
+  actions: Q4 TORSION CLUSTER_WEIGHTS RESTRAINT KDE LOCAL_AVERAGE DIFFERENCE MATRIX_PRODUCT PRINT OUTER_PRODUCT CUSTOM PDB2CONSTANT LESS_THAN CONCATENATE GATHER_REPLICAS DFSCLUSTERING PATH INSPHERE RMSD_VECTOR COM SPRINT DISTANCE CONTACT_MATRIX MATRIX_VECTOR_PRODUCT
+    COMBINE RMSD ONES GSYMFUNC_THREEBODY GEOMETRIC_PATH POSITION GET_VOLUME_ELEMENT LOCAL_Q1 HISTOGRAM Q1 DIAGONALIZE REFERENCE_GRID EUCLIDEAN_DISTANCE CLUSTER_PROPERTIES DISPLACEMENT SPHERICAL_HARMONIC DOMAIN_DECOMPOSITION PAIRENTROPY LOWEST AVERAGE RDF Q6
+    INTERPOLATE_GRID PCAVARS INTEGRATE_GRID COORDINATIONNUMBER WHOLEMOLECULES VSTACK DUMPGRID SELECT_COMPONENTS SUM CENTER VOLUME FIXEDATOM MORE_THAN CONSTANT GROUP MEAN BIASVALUE ACCUMULATE DISTANCE_MATRIX DISTANCES GPATH SORT TRANSPOSE
+  modules: colvar sprint core multicolvar bias adjmat vatom volumes refdist function matrixtools clusters generic valtools symfunc mapping gridtools
+  time: 440.4434670229998
+- id: '21.007'
+  title: Optimizing PLUMED performances
+  shortitle: Optimizing PLUM...
+  path: lessons/21/007/data/NAVIGATION.html
+  instructors: Max Bonomi
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: Some lessons on monitoring and improving the performance of PLUMED and gromacs
+  tags: masterclass-2021
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/004
+  - 21/005
+  actions: COORDINATION DISTANCE EFFECTIVE_ENERGY_DRIFT RMSD COMBINE PRINT DEBUG CUSTOM GROUP METAD WHOLEMOLECULES
+  modules: colvar core bias function generic
+  time: 19.569547464000152
