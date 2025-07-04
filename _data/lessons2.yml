@@ -1,0 +1,365 @@
+# file containing lesson database.
+- id: '25.001'
+  title: VisMetaDynamics
+  shortitle: VisMetaDynamics
+  path: lessons/25/001/data/NAVIGATION.html
+  instructors: Christian Phillips
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: A graphical tool that allows you to visually inspect how the free energy surface for a metadynamics simulation is affected by the choice of hyperparameters
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/004
+  actions: ''
+  modules: ''
+  time: 4.88349322900001
+- id: '24.016'
+  title: Host-Guest binding free energies using an automated OneOPES protocol
+  shortitle: Host-Guest bind...
+  path: lessons/24/016/data/NAVIGATION.html
+  instructors: Pedro Febrer Martinez, Valerio Rizzi, Simone Aureli, Francesco Luigi Gervasio
+  doi: 10.1101/2024.08.23.609378
+  reference: "P. Febrer Martinez, V. Rizzi, S. Aureli, F. L. Gervasio, Host-Guest binding free energies \xE0 la carte: an automated OneOPES protocol (2024)"
+  ref_url: http://dx.doi.org/10.1101/2024.08.23.609378
+  description: A tutorial on an automated OneOPES protocol for calculating host-guest binding free energies
+  tags: OneOPES, ligand binding, binding free energy, SAMPL challenge, host-guest
+  ninputs: 12
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  actions: MATHEVAL FIT_TO_TEMPLATE FIXEDATOM PRINT DISTANCE LOWER_WALLS WHOLEMOLECULES OPES_METAD_EXPLORE GROUP CENTER COORDINATION ECV_MULTITHERMAL ENERGY UPPER_WALLS ANGLE OPES_EXPANDED
+  modules: function generic bias core opes vatom colvar
+  time: 64.80318912899997
+- id: '24.013'
+  title: Permutationally Invariant Networks for Enhanced Sampling (PINES)
+  shortitle: Permutationally...
+  path: lessons/24/013/data/NAVIGATION.html
+  instructors: Nicholas S.M. Herringer, Aniruddha Seal, Armin Shayesteh Zadeh, Siva Dasetty, Andrew L. Ferguson
+  doi: 10.1021/acs.jctc.3c00923
+  reference: "N. S. M. Herringer, S. Dasetty, D. Gandhi, J. Lee, A. L. Ferguson, Permutationally Invariant Networks for Enhanced Sampling (PINES): Discovery of Multimolecular and Solvent-Inclusive Collective Variables. Journal of Chemical Theory and Computation.\
+    \ 20, 178\u2013198 (2023)"
+  ref_url: http://dx.doi.org/10.1021/acs.jctc.3c00923
+  description: An introduction to using permutationally invariant networks for enhanced sampling
+  tags: Metadynamics, Permutationally invariant vectors, machine learning collective variable, parallel bias metadynamics
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/004
+  actions: ''
+  modules: ''
+  time: 4.959267769000007
+- id: '24.012'
+  title: Exploring Free Energy Surfaces with MACE-PLUMED Metadynamics
+  shortitle: Exploring Free ...
+  path: lessons/24/012/data/NAVIGATION.html
+  instructors: S.G.H. Brookes, C. Schran, A. Michaelides
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: Performing metadynamics simulations with LAMMPS, MACE and PLUMED
+  tags: metadynamics, machine learning
+  ninputs: 1
+  nfail: 1
+  nfailm: 1
+  inputfails:
+    v2.9: 1
+    master: 1
+  depends:
+  - 21/004
+  actions: UNITS PRINT
+  modules: setup generic
+  time: 12.127262947999952
+- id: '24.011'
+  title: Parameterization of Path CVs for drug-target binding
+  shortitle: Parameterizatio...
+  path: lessons/24/011/data/NAVIGATION.html
+  instructors: Mattia Bernetti and Matteo Masetti
+  doi: 10.1021/acs.jctc.9b00450
+  reference: "M. Bernetti, M. Masetti, M. Recanatini, R. E. Amaro, A. Cavalli, An Integrated Markov State Model and Path Metadynamics Approach To Characterize Drug Binding Processes. Journal of Chemical Theory and Computation. 15, 5689\u20135702 (2019)"
+  ref_url: http://dx.doi.org/10.1021/acs.jctc.9b00450
+  description: Using path CVs to study drug target binding with metadynamics
+  tags: drug-target binding, Path CVs, metadynamics
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/001
+  - 21/004
+  actions: MOLINFO PRINT DISTANCE PATHMSD WHOLEMOLECULES METAD LOWER_WALLS CENTER UPPER_WALLS MOVINGRESTRAINT
+  modules: bias generic vatom colvar
+  time: 33.88797421899994
+- id: '24.010'
+  title: Modelling mechanobiological processes
+  shortitle: Modelling mecha...
+  path: lessons/24/010/data/NAVIGATION.html
+  instructors: Claire Pritchard, Guillaume Stirnemann and Glen Hocky
+  doi: 10.1021/acs.jpcb.1c10715
+  reference: "G. Stirnemann, Recent Advances and Emerging Challenges in the Molecular Modeling of Mechanobiological Processes. The Journal of Physical Chemistry B. 126, 1365\u20131374 (2022)"
+  ref_url: http://dx.doi.org/10.1021/acs.jpcb.1c10715
+  description: A tutorial on modelling mechanobiological processes
+  tags: Metadynamics, pulling, force, rates, GPCR
+  ninputs: 5
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 22/015
+  actions: MATHEVAL COMMITTOR BIASVALUE PRINT METAD DISTANCE COM UNITS DUMPATOMS RESTRAINT
+  modules: function generic setup bias vatom colvar
+  time: 29.035219178000034
+- id: '24.008'
+  title: Using the maze module
+  shortitle: Using the maze ...
+  path: lessons/24/008/data/NAVIGATION.html
+  instructors: Jakub Rydzewski
+  doi: 10.1063/1.5108638
+  reference: J. Rydzewski, O. Valsson, Finding multiple reaction pathways of ligand unbinding. The Journal of Chemical Physics. 150 (2019)
+  ref_url: http://dx.doi.org/10.1063/1.5108638
+  description: Sampling ligand-protein dissociation using the maze module
+  tags: protein, ligand, dissociation, unbinding, maze
+  ninputs: 4
+  nfail: 2
+  nfailm: 2
+  inputfails:
+    v2.9: 2
+    master: 2
+  depends:
+  - 21/001
+  actions: GROUP CENTER DISTANCE COMMITTOR
+  modules: core generic vatom colvar
+  time: 29.427450754999995
+- id: '24.007'
+  title: Transition-Tempered Metadynamics
+  shortitle: Transition-Temp...
+  path: lessons/24/007/data/NAVIGATION.html
+  instructors: Jiangbo Wu and Gregory A. Voth
+  doi: 10.1021/ct500441q
+  reference: "J. F. Dama, G. Rotskoff, M. Parrinello, G. A. Voth, Transition-Tempered Metadynamics: Robust, Convergent Metadynamics via On-the-Fly Transition Barrier Estimation. Journal of Chemical Theory and Computation. 10, 3626\u20133633 (2014)"
+  ref_url: http://dx.doi.org/10.1021/ct500441q
+  description: An introduction to the transition tempered metadynamics method
+  tags: metadynamics, free energy sampling, reaction mechanism
+  ninputs: 3
+  nfail: 2
+  nfailm: 2
+  inputfails:
+    v2.9: 2
+    master: 2
+  depends:
+  - 21/004
+  actions: FLUSH EXTENDED_LAGRANGIAN MOLINFO PRINT METAD DISTANCE WHOLEMOLECULES RESTART LOWER_WALLS GROUP UNITS COM COORDINATION RESTRAINT UPPER_WALLS TORSION
+  modules: generic setup bias core vatom colvar
+  time: 20.939880535000043
+- id: '24.006'
+  title: Standard binding free energies from cylindrical restraints
+  shortitle: Standard bindin...
+  path: lessons/24/006/data/NAVIGATION.html
+  instructors: Blake I Armstrong, Paolo Raiteri and Julian D Gale
+  doi: 10.1021/acs.jpcc.3c02864
+  reference: "B. I. Armstrong, A. Silvestri, M. De La Pierre, P. Raiteri, J. D. Gale, Determining the Complete Stability of Calcite Kink Sites: Real vs Ideal. The Journal of Physical Chemistry C. 127, 13958\u201313968 (2023)"
+  ref_url: http://dx.doi.org/10.1021/acs.jpcc.3c02864
+  description: Calculating standard binding free energies with metadynamics, PLUMED and OpenMM
+  tags: metadynamics, surface binding, cylindrical restraint, standard state, volume correction, multiple-walkers
+  ninputs: 9
+  nfail: 1
+  nfailm: 1
+  inputfails:
+    v2.9: 1
+    master: 1
+  depends:
+  - 21/004
+  actions: CUSTOM BIASVALUE FIXEDATOM PRINT METAD DISTANCE LOWER_WALLS RESTART UNITS FLUSH UPPER_WALLS
+  modules: function generic setup bias vatom colvar
+  time: 125.14027983400001
+- id: '24.005'
+  title: Path integral metadynamics
+  shortitle: Path integral m...
+  path: lessons/24/005/data/NAVIGATION.html
+  instructors: Guillaume Fraux and Michele Ceriotti
+  doi: 10.1063/5.0215869
+  reference: "Y. Litman, V. Kapil, Y. M. Y. Feldman, D. Tisi, T. Begu\u0161i\u0107, K. Fidanyan, G. Fraux, J. Higer, M. Kellner, T. E. Li, E. S. P\xF3s, E. Stocco, G. Trenins, B. Hirshberg, M. Rossi, M. Ceriotti, i-PI 3.0: A flexible and efficient framework\
+    \ for advanced atomistic simulations. The Journal of Chemical Physics. 161 (2024)"
+  ref_url: http://dx.doi.org/10.1063/5.0215869
+  description: Incorporating nuclear quantum effects in metadynamics simulations using path integrals
+  tags: Metadynamics, path integrals, nuclear quantum effects
+  ninputs: 1
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - '21.001'
+  - '21.004'
+  actions: METAD PRINT DISTANCES DISTANCE SUM LESS_THAN COMBINE UPPER_WALLS FLUSH
+  modules: generic bias multicolvar function colvar
+  time: 7.022189546999925
+- id: '24.004'
+  title: Volume-based Metadynamics
+  shortitle: Volume-based Me...
+  path: lessons/24/004/data/NAVIGATION.html
+  instructors: Riccardo Capelli
+  doi: 10.1021/acs.jpclett.9b01183
+  reference: "R. Capelli, P. Carloni, M. Parrinello, Exhaustive Search of Ligand Binding Pathways via Volume-Based Metadynamics. The Journal of Physical Chemistry Letters. 10, 3495\u20133499 (2019)"
+  ref_url: http://dx.doi.org/10.1021/acs.jpclett.9b01183
+  description: This tutorial teaches you how to run free energy calculations to investigate protein-ligand binding
+  tags: Metadynamics, protein-ligand binding, free energy calculations
+  ninputs: 17
+  nfail: 0
+  nfailm: 1
+  inputfails:
+    v2.9: 0
+    master: 1
+  depends:
+  - 21/001
+  - 21/004
+  actions: CONVERT_TO_FES WRAPAROUND ONES COM ACCUMULATE RMSD FLUSH POSITION FIT_TO_TEMPLATE WHOLEMOLECULES KDE GROUP REWEIGHT_BIAS RESTRAINT HISTOGRAM METAD COORDINATION UPPER_WALLS MATHEVAL READ CUSTOM PRINT DUMPGRID
+  modules: function gridtools generic bias core vatom colvar
+  time: 90.81912373800003
+- id: '22.013'
+  title: SASA module - The solvent accessible surface area of proteins as a collective variable, and the application of PLUMED for implicit solvent simulations
+  shortitle: SASA module - T...
+  path: lessons/22/013/data/NAVIGATION.html
+  instructors: Andrea Arsiccio
+  doi: 10.1021/acs.jpcb.2c00889
+  reference: "A. Arsiccio, P. Ganguly, J.-E. Shea, A Transfer Free Energy Based Implicit Solvent Model for Protein Simulations in Solvent Mixtures: Urea-Induced Denaturation as a Case Study. The Journal of Physical Chemistry B. 126, 4472\u20134482 (2022)"
+  ref_url: http://dx.doi.org/10.1021/acs.jpcb.2c00889
+  description: An introduction to the SASA module and a description of how PLUMED can be used for implicit solvent simulations.
+  tags: masterclass-2022
+  ninputs: 4
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/001
+  - 21/004
+  actions: CUSTOM LOWEST BIASVALUE ANTIBETARMSD PRINT MOLINFO DISTANCE SECONDARY_STRUCTURE_DRMSD PARABETARMSD SASA_HASEL LESS_THAN GYRATION SUM ALPHARMSD
+  modules: sasa secondarystructure generic bias function colvar
+  time: 23.36530599899993
+- id: '22.012'
+  title: Free energy calculations in crystalline solids
+  shortitle: Free energy cal...
+  path: lessons/22/012/data/NAVIGATION.html
+  instructors: Pablo Piaggi
+  doi: 10.1063/1.5102104
+  reference: P. M. Piaggi, M. Parrinello, Calculation of phase diagrams in the multithermal-multibaric ensemble. The Journal of Chemical Physics. 150 (2019)
+  ref_url: http://dx.doi.org/10.1063/1.5102104
+  description: An introduction to the Environmental similarity CV and the calculation of chemical potentials of liquids and solids
+  tags: masterclass-2022
+  ninputs: 8
+  nfail: 5
+  nfailm: 5
+  inputfails:
+    v2.9: 5
+    master: 5
+  depends:
+  - 21/001
+  - 21/004
+  - 22/003
+  actions: HISTOGRAM CUSTOM MATHEVAL Q6 OPES_METAD ONES LOWER_WALLS MORE_THAN GROUP DISTANCE_MATRIX ENVIRONMENTSIMILARITY MATRIX_VECTOR_PRODUCT DUMPGRID SUM UPPER_WALLS MEAN
+  modules: gridtools matrixtools adjmat generic symfunc bias envsim core opes function
+  time: 36.58537483000009
+- id: '22.002'
+  title: Analysis of PLUMED output by Metadynminer
+  shortitle: Analysis of PLU...
+  path: lessons/22/002/data/NAVIGATION.html
+  instructors: Vojtech Spiwok
+  doi: 10.32614/RJ-2022-057
+  reference: "D. Trapl, V. Spiwok, Analysis of the Results of Metadynamics Simulations by metadynminer and metadynminer3d. The R Journal. 14, 46\u201358 (2022)"
+  ref_url: http://dx.doi.org/10.32614/RJ-2022-057
+  description: An introduction to the R package Metadynminer which can be used to analyse the output from metadynamics simulations
+  tags: masterclass-2022
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/004
+  actions: ''
+  modules: ''
+  time: 4.3055368320001435
+- id: '21.005'
+  title: Replica exchange methods
+  shortitle: Replica exchang...
+  path: lessons/21/005/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  doi: 10.1016/S0009-2614(99)01123-9
+  reference: "Y. Sugita, Y. Okamoto, Replica-exchange molecular dynamics method for protein folding. Chemical Physics Letters. 314, 141\u2013151 (1999)"
+  ref_url: http://dx.doi.org/10.1016/S0009-2614(99)01123-9
+  description: Running umbrella sampling with replica exchange, bias exchange metadynamics and parallel tempering metadynamics
+  tags: masterclass-2021
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/003
+  - 21/004
+  actions: MOLINFO PRINT METAD RANDOM_EXCHANGES RESTRAINT TORSION
+  modules: bias generic colvar
+  time: 19.654389233999837
+- id: '21.003'
+  title: Umbrella Sampling
+  shortitle: Umbrella Sampli...
+  path: lessons/21/003/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  doi: 10.1016/0021-9991(77)90121-8
+  reference: "G. M. Torrie, J. P. Valleau, Nonphysical sampling distributions in Monte Carlo free-energy estimation: Umbrella sampling. Journal of Computational Physics. 23, 187\u2013199 (1977)"
+  ref_url: http://dx.doi.org/10.1016/0021-9991(77)90121-8
+  description: How to calculate statistical averages and free energy surfaces using umbrella sampling
+  tags: masterclass-2021
+  ninputs: 5
+  nfail: 0
+  nfailm: 3
+  inputfails:
+    v2.9: 0
+    master: 3
+  depends:
+  - 21/001
+  - 21/002
+  actions: HISTOGRAM CONVERT_TO_FES CUSTOM READ BIASVALUE MOLINFO PRINT RESTRAINT DUMPGRID REWEIGHT_BIAS TORSION
+  modules: gridtools generic bias function colvar
+  time: 28.0360065320001
+- id: '21.002'
+  title: Statistical errors in MD
+  shortitle: Statistical err...
+  path: lessons/21/002/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: How to calculate errors on averages calculated from unbiased and biased MD simulations using the method of block averages.
+  tags: masterclass-2021
+  ninputs: 8
+  nfail: 0
+  nfailm: 4
+  inputfails:
+    v2.9: 0
+    master: 4
+  depends:
+  - 21/001
+  actions: AVERAGE HISTOGRAM READ CONVERT_TO_FES CUSTOM REWEIGHT_BIAS COORDINATIONNUMBER PRINT METAD DISTANCE UPPER_WALLS UNITS COM DUMPGRID RESTRAINT CONSTANT
+  modules: gridtools generic symfunc setup bias vatom function colvar
+  time: 41.86586213999999

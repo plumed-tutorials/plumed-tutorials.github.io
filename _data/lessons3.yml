@@ -1,0 +1,333 @@
+# file containing lesson database.
+- id: '25.003'
+  title: Defining custom machine learning CV with metatomic
+  shortitle: Defining custom...
+  path: lessons/25/003/data/NAVIGATION.html
+  instructors: Guillaume Fraux, Rohit Goswami and Michele Ceriotti
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: An introduction to the use of interface between plumed and the metatomic library
+  ninputs: 1
+  nfail: 1
+  nfailm: 1
+  inputfails:
+    v2.9: 1
+    master: 1
+  depends:
+  - '21.001'
+  - '21.004'
+  actions: METATOMIC METAD SELECT_COMPONENTS
+  modules: metatomic bias valtools
+  time: 5.179984712000078
+- id: '24.020'
+  title: An introduction to CpH-Metadynamics simulations
+  shortitle: An introduction...
+  path: lessons/24/020/data/NAVIGATION.html
+  instructors: Tomas Silva
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: This tutorial aims to train users to perform CpH-Metadynamics simulations using the stochastic titration constant-pH Molecular Dynamics method and PLUMED.
+  tags: RNA, Constant pH
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - '21.004'
+  actions: ''
+  modules: ''
+  time: 13.89331147900009
+- id: '24.019'
+  title: ASE-PLUMED interface
+  shortitle: ASE-PLUMED inte...
+  path: lessons/24/019/data/NAVIGATION.html
+  instructors: Daniel Sucerquia, Pilar Cossio, Olga Lopez-Acevedo
+  doi: 10.1063/5.0082332
+  reference: D. Sucerquia, C. Parra, P. Cossio, O. Lopez-Acevedo, Ab initio metadynamics determination of temperature-dependent free-energy landscape in ultrasmall silver clusters. The Journal of Chemical Physics. 156 (2022)
+  ref_url: http://dx.doi.org/10.1063/5.0082332
+  description: Using PLUMED from ASE
+  tags: atomistic calculations, ab-initio, molecular dynamics
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/001
+  actions: COM GYRATION CUSTOM MEAN PRINT UPPER_WALLS UNITS COMBINE DISTANCE COORDINATION GROUP MATRIX_VECTOR_PRODUCT FLUSH ONES LOWER_WALLS CONTACT_MATRIX METAD COORDINATIONNUMBER
+  modules: vatom core bias setup adjmat generic colvar matrixtools symfunc function
+  time: 28.030350473999988
+- id: '24.009'
+  title: Multiple Walkers Metadynamics Simulations with a Reactive Machine Learning Interatomic Potential
+  shortitle: Multiple Walker...
+  path: lessons/24/009/data/NAVIGATION.html
+  instructors: Kam-Tung Chan and Davide Donadio
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: Running metadynamics with a reactive, machine-learning interaction potential
+  tags: metadynamics, nitrate anion, machine learning interatomic potential
+  ninputs: 3
+  nfail: 0
+  nfailm: 3
+  inputfails:
+    v2.9: 0
+    master: 3
+  depends:
+  - 21/001
+  - 21/002
+  - 21/004
+  actions: ANGLE CUSTOM UPPER_WALLS PRINT UNITS READ DUMPGRID DISTANCE COORDINATION GROUP FLUSH HBOND_MATRIX HISTOGRAM METAD REWEIGHT_METAD
+  modules: core bias setup adjmat generic colvar gridtools function
+  time: 21.858076555000025
+- id: '23.003'
+  title: Profiling, GPUs and PLUMED
+  shortitle: Profiling, GPUs...
+  path: lessons/23/003/data/NAVIGATION.html
+  instructors: Ketan Bhardwaj
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: A report based on some profiling work on PLUMED that has been performed by the SSEC
+  tags: developers, C++, profiling
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 1.922194625999964
+- id: '22.017'
+  title: A Bayesian approach to integrate cryo-EM data into MD simulations with PLUMED
+  shortitle: A Bayesian appr...
+  path: lessons/22/017/data/NAVIGATION.html
+  instructors: Samuel Hoff and Max Bonomi
+  doi: 10.1371/journal.pcbi.1012180
+  reference: S. E. Hoff, F. E. Thomasen, K. Lindorff-Larsen, M. Bonomi, Accurate model and ensemble refinement using cryo-electron microscopy maps and Bayesian inference. PLOS Computational Biology. 20, e1012180 (2024)
+  ref_url: http://dx.doi.org/10.1371/journal.pcbi.1012180
+  description: How to use PLUMED to perform single-structure and ensemble refinement using cryo-EM maps and EMMIVox.
+  tags: masterclass-2022
+  ninputs: 2
+  nfail: 2
+  nfailm: 2
+  inputfails:
+    v2.9: 2
+    master: 2
+  depends:
+  - 21/001
+  actions: PRINT EMMIVOX GROUP MOLINFO WHOLEMOLECULES BIASVALUE
+  modules: core generic isdb bias
+  time: 14.62449049199995
+- id: '22.015'
+  title: Mechanical pulling + FISST module
+  shortitle: Mechanical pull...
+  path: lessons/22/015/data/NAVIGATION.html
+  instructors: Guillaume Stirnemann and Glen Hocky
+  doi: 10.1063/5.0009280
+  reference: M. J. Hartmann, Y. Singh, E. Vanden-Eijnden, G. M. Hocky, Infinite switch simulated tempering in force (FISST). The Journal of Chemical Physics. 152 (2020)
+  ref_url: http://dx.doi.org/10.1063/5.0009280
+  description: This tutorial explains how mechanical forces can be modeled using PLUMED and the FISST module
+  tags: masterclass-2022
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/001
+  actions: DUMPATOMS PRINT MATHEVAL UNITS FISST DISTANCE RESTRAINT BIASVALUE METAD
+  modules: fisst bias setup generic colvar function
+  time: 42.67774406600006
+- id: '22.011'
+  title: Variationally Enhanced Sampling
+  shortitle: Variationally E...
+  path: lessons/22/011/data/NAVIGATION.html
+  instructors: Omar Valsson
+  doi: 10.1021/acs.jctc.2c00197
+  reference: "B. Pampel, O. Valsson, Improving the Efficiency of Variationally Enhanced Sampling with Wavelet-Based Bias Potentials. Journal of Chemical Theory and Computation. 18, 4127\u20134141 (2022)"
+  ref_url: http://dx.doi.org/10.1021/acs.jctc.2c00197
+  description: An introduction to running Variationally Enhanced Sampling (VES) using PLUMED.
+  tags: masterclass-2022 Variationally Enhanced Sampling VES
+  ninputs: 14
+  nfail: 2
+  nfailm: 2
+  inputfails:
+    v2.9: 2
+    master: 2
+  actions: CONVERT_TO_FES TD_WELLTEMPERED UPPER_WALLS PRINT READ DUMPGRID BF_WAVELETS DISTANCE COORDINATION TD_UNIFORM OPT_AVERAGED_SGD VES_LINEAR_EXPANSION REWEIGHT_BIAS BF_LEGENDRE HISTOGRAM
+  modules: ves bias generic colvar gridtools
+  time: 95.30275655899993
+- id: '22.009'
+  title: Using path collective variables to find reaction mechanisms in complex free energy landscapes
+  shortitle: Using path coll...
+  path: lessons/22/009/data/NAVIGATION.html
+  instructors: Bernd Ensing
+  doi: 10.1103/PhysRevLett.109.020601
+  reference: "G. D\xEDaz Leines, B. Ensing, Path Finding on High-Dimensional Free Energy Landscapes. Physical Review Letters. 109 (2012)"
+  ref_url: http://dx.doi.org/10.1103/PhysRevLett.109.020601
+  description: An introduction to using path collective variables for describing and simulating activated molecular processes
+  tags: masterclass-2022
+  ninputs: 1
+  nfail: 1
+  nfailm: 1
+  inputfails:
+    v2.9: 1
+    master: 1
+  depends:
+  - 21/001
+  actions: UPPER_WALLS PRINT UNITS DISTANCE LOWER_WALLS METAD
+  modules: bias setup generic colvar
+  time: 8.853414017999967
+- id: '22.008'
+  title: Modelling Concentration-driven processes with PLUMED
+  shortitle: Modelling Conce...
+  path: lessons/22/008/data/NAVIGATION.html
+  instructors: Matteo Salvalaglio
+  doi: 10.1063/1.4917200
+  reference: C. Perego, M. Salvalaglio, M. Parrinello, Molecular dynamics simulations of solutions at constant chemical potential. The Journal of Chemical Physics. 142 (2015)
+  ref_url: http://dx.doi.org/10.1063/1.4917200
+  description: An introduction to the tools that are available in PLUMED for simulating concentration-driven processes such as nucleation, growth and diffusion.
+  tags: masterclass-2022
+  ninputs: 4
+  nfail: 3
+  nfailm: 3
+  inputfails:
+    v2.9: 3
+    master: 3
+  depends:
+  - 21/001
+  actions: PRINT DFSCLUSTERING GROUP RESTRAINT MATRIX_VECTOR_PRODUCT SUM CLUSTER_DISTRIBUTION FLUSH ONES CLUSTER_NATOMS CONTACT_MATRIX MORE_THAN COORDINATIONNUMBER
+  modules: core bias adjmat generic clusters matrixtools symfunc function
+  time: 32.97608190700009
+- id: '22.005'
+  title: Machine learning collective variables with PyTorch
+  shortitle: Machine learnin...
+  path: lessons/22/005/data/NAVIGATION.html
+  instructors: Luigi Bonati
+  doi: 10.1063/5.0156343
+  reference: 'L. Bonati, E. Trizio, A. Rizzi, M. Parrinello, A unified framework for machine learning collective variables for enhanced sampling simulations: <tt>mlcolvar</tt>. The Journal of Chemical Physics. 159 (2023)'
+  ref_url: http://dx.doi.org/10.1063/5.0156343
+  description: An introduction to designing data-driven CVs using two methods (DeepLDA and DeepTICA).
+  tags: masterclass-2022
+  ninputs: 1
+  nfail: 1
+  nfailm: 1
+  inputfails:
+    v2.9: 1
+    master: 1
+  depends:
+  - 21/001
+  - 22/003
+  actions: TORSION PYTORCH_MODEL PRINT
+  modules: generic pytorch colvar
+  time: 22.049413876000017
+- id: '22.003'
+  title: Rethinking Metadynamics using the OPES method
+  shortitle: Rethinking Meta...
+  path: lessons/22/003/data/NAVIGATION.html
+  instructors: Michele Invernizzi
+  doi: 10.1021/acs.jpclett.0c00497
+  reference: "M. Invernizzi, M. Parrinello, Rethinking Metadynamics: From Bias Potentials to Probability Distributions. The Journal of Physical Chemistry Letters. 11, 2731\u20132736 (2020)"
+  ref_url: http://dx.doi.org/10.1021/acs.jpclett.0c00497
+  description: An introduction to the On-the-fly Probability Enhanced Sampling method
+  tags: masterclass-2022
+  ninputs: 5
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/003
+  - 21/004
+  actions: OPES_METAD ENERGY OPES_METAD_EXPLORE ECV_UMBRELLAS_LINE ECV_MULTITHERMAL TORSION OPES_EXPANDED
+  modules: opes colvar
+  time: 35.18331452199993
+- id: '22.001'
+  title: Funnel Metadynamics
+  shortitle: Funnel Metadyna...
+  path: lessons/22/001/data/NAVIGATION.html
+  instructors: Stefano Raniolo and Vittorio Limongelli
+  doi: 10.1038/s41596-020-0342-4
+  reference: "S. Raniolo, V. Limongelli, Ligand binding free-energy calculations with funnel metadynamics. Nature Protocols. 15, 2837\u20132866 (2020)"
+  ref_url: http://dx.doi.org/10.1038/s41596-020-0342-4
+  description: An introduction to modelling ligand binding using funnel metadynamics
+  tags: masterclass-2022 Funnel Metadynamics ligand/target binding
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 15.032128952999983
+- id: '21.007'
+  title: Optimizing PLUMED performances
+  shortitle: Optimizing PLUM...
+  path: lessons/21/007/data/NAVIGATION.html
+  instructors: Max Bonomi
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: Some lessons on monitoring and improving the performance of PLUMED and gromacs
+  tags: masterclass-2021
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/004
+  - 21/005
+  actions: CUSTOM PRINT COMBINE DEBUG EFFECTIVE_ENERGY_DRIFT DISTANCE COORDINATION GROUP WHOLEMOLECULES RMSD METAD
+  modules: core bias generic colvar function
+  time: 19.401136466000025
+- id: '21.001'
+  title: PLUMED syntax and analysis
+  shortitle: PLUMED syntax a...
+  path: lessons/21/001/data/NAVIGATION.html
+  instructors: Max Bonomi
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: Basic features of the PLUMED input syntax with a particular focus on PBCs and selection tools
+  tags: masterclass-2021
+  ninputs: 7
+  nfail: 2
+  nfailm: 2
+  inputfails:
+    v2.9: 2
+    master: 2
+  depends:
+  - 20/001
+  actions: DUMPATOMS GYRATION CENTER PRINT ANTIBETARMSD COMBINE DISTANCE ALPHARMSD PARABETARMSD MOLINFO WHOLEMOLECULES TORSION
+  modules: secondarystructure vatom generic colvar function
+  time: 37.53690592199996
+- id: '20.001'
+  title: Installing PLUMED
+  shortitle: Installing PLUM...
+  path: lessons/20/001/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: An interactive tutorial resource on compiling PLUMED and linking it with MD codes.
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 26.185992538999926
