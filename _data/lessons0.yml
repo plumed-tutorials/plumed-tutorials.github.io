@@ -1,0 +1,228 @@
+# file containing lesson database.
+- id: '24.021'
+  title: Setting Up and Analyzing Bias-Exchange Metadynamics Simulations
+  shortitle: Setting Up and ...
+  path: lessons/24/021/data/NAVIGATION.html
+  instructors: Fabrizio Marinelli and Vanessa Ariadna Leone Alvarez
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: This tutorial offers a comprehensive protocol, complemented by practical examples, for setting up and performing free energy analysis of bias-exchange metadynamics simulations of cis-trans isomerization in a proline-containing peptide.
+  tags: molecular dynamics, metadynamics, bias exchange metadynamics, weighted histogram analysis method, mean forces, cis-trans isomerization, peptidyl-prolyl peptide
+  ninputs: 4
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/001
+  actions: INCLUDE PRINT RANDOM_EXCHANGES TORSION METAD DUMPFORCES
+  modules: generic colvar bias
+  time: 25.0913535090001
+- id: '24.016'
+  title: Host-Guest binding free energies using an automated OneOPES protocol
+  shortitle: Host-Guest bind...
+  path: lessons/24/016/data/NAVIGATION.html
+  instructors: Pedro Febrer Martinez, Valerio Rizzi, Simone Aureli, Francesco Luigi Gervasio
+  doi: 10.1101/2024.08.23.609378
+  reference: "P. Febrer Martinez, V. Rizzi, S. Aureli, F. L. Gervasio, Host-Guest binding free energies \xE0 la carte: an automated OneOPES protocol. doi: 10.1101/2024.08.23.609378 (2024)"
+  ref_url: http://dx.doi.org/10.1101/2024.08.23.609378
+  description: A tutorial on an automated OneOPES protocol for calculating host-guest binding free energies
+  tags: OneOPES, ligand binding, binding free energy, SAMPL challenge, host-guest
+  ninputs: 12
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  actions: DISTANCE GROUP FIXEDATOM WHOLEMOLECULES OPES_METAD_EXPLORE CENTER COORDINATION ANGLE MATHEVAL ENERGY PRINT LOWER_WALLS ECV_MULTITHERMAL OPES_EXPANDED UPPER_WALLS FIT_TO_TEMPLATE
+  modules: opes function core colvar generic bias vatom
+  time: 66.41753587899984
+- id: '24.014'
+  title: Alpha-Fold Metainference for structural ensemble prediction of a partially disordered protein
+  shortitle: Alpha-Fold Meta...
+  path: lessons/24/014/data/NAVIGATION.html
+  instructors: Faidon Brotzakis, Hussein Murtada and Michele Vendruscolo
+  doi: 10.1101/2023.01.19.524720
+  reference: 'Z. F. Brotzakis, S. Zhang, M. Vendruscolo, AlphaFold Prediction of Structural Ensembles of Disordered Proteins. doi: 10.1101/2023.01.19.524720 (2023)'
+  ref_url: http://dx.doi.org/10.1101/2023.01.19.524720
+  description: A tutorial about how metainference can be used in tandem with Alpha-fold to predict the ensemble of structures for a partially disordered protein.
+  tags: Protein dynamics, AlphaFold2, Metainference, PB-MetaD, CALVADOS2, partially disordered proteins
+  ninputs: 2
+  nfail: 1
+  nfailm: 1
+  inputfails:
+    v2.9: 1
+    master: 1
+  depends:
+  - 21/001
+  actions: METAINFERENCE CENTER CONSTANT PRINT CONTACTMAP GYRATION RMSD MOLINFO FLUSH ENDPLUMED PBMETAD TORSION UPPER_WALLS WHOLEMOLECULES
+  modules: generic colvar bias isdb vatom
+  time: 13.123848609000106
+- id: '24.013'
+  title: Permutationally Invariant Networks for Enhanced Sampling (PINES)
+  shortitle: Permutationally...
+  path: lessons/24/013/data/NAVIGATION.html
+  instructors: Nicholas S.M. Herringer, Aniruddha Seal, Armin Shayesteh Zadeh, Siva Dasetty, Andrew L. Ferguson
+  doi: 10.1021/acs.jctc.3c00923
+  reference: "N. S. M. Herringer, S. Dasetty, D. Gandhi, J. Lee, A. L. Ferguson, Permutationally Invariant Networks for Enhanced Sampling (PINES): Discovery of Multimolecular and Solvent-Inclusive Collective Variables. Journal of Chemical Theory and Computation\
+    \ 20, 178\u2013198 (2023)"
+  ref_url: http://dx.doi.org/10.1021/acs.jctc.3c00923
+  description: An introduction to using permutationally invariant networks for enhanced sampling
+  tags: Metadynamics, Permutationally invariant vectors, machine learning collective variable, parallel bias metadynamics
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/004
+  actions: ''
+  modules: ''
+  time: 5.096426071999986
+- id: '22.015'
+  title: Mechanical pulling + FISST module
+  shortitle: Mechanical pull...
+  path: lessons/22/015/data/NAVIGATION.html
+  instructors: Guillaume Stirnemann and Glen Hocky
+  doi: 10.1063/5.0009280
+  reference: M. J. Hartmann, Y. Singh, E. Vanden-Eijnden, G. M. Hocky, Infinite switch simulated tempering in force (FISST). The Journal of Chemical Physics 152 (2020)
+  ref_url: http://dx.doi.org/10.1063/5.0009280
+  description: This tutorial explains how mechanical forces can be modeled using PLUMED and the FISST module
+  tags: masterclass-2022
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/001
+  actions: DISTANCE UNITS MATHEVAL BIASVALUE PRINT RESTRAINT DUMPATOMS METAD FISST
+  modules: fisst function colvar generic bias setup
+  time: 44.798106338000025
+- id: '22.013'
+  title: SASA module - The solvent accessible surface area of proteins as a collective variable, and the application of PLUMED for implicit solvent simulations
+  shortitle: SASA module - T...
+  path: lessons/22/013/data/NAVIGATION.html
+  instructors: Andrea Arsiccio
+  doi: 10.1021/acs.jpcb.2c00889
+  reference: "A. Arsiccio, P. Ganguly, J.-E. Shea, A Transfer Free Energy Based Implicit Solvent Model for Protein Simulations in Solvent Mixtures: Urea-Induced Denaturation as a Case Study. The Journal of Physical Chemistry B 126, 4472\u20134482 (2022)"
+  ref_url: http://dx.doi.org/10.1021/acs.jpcb.2c00889
+  description: An introduction to the SASA module and a description of how PLUMED can be used for implicit solvent simulations.
+  tags: masterclass-2022
+  ninputs: 4
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/001
+  - 21/004
+  actions: SASA_HASEL DISTANCE SECONDARY_STRUCTURE_DRMSD CUSTOM SUM PARABETARMSD PRINT BIASVALUE GYRATION MOLINFO ALPHARMSD LESS_THAN ANTIBETARMSD LOWEST
+  modules: sasa function colvar generic secondarystructure bias
+  time: 24.228564019000032
+- id: '22.010'
+  title: Hamiltonian replica exchange with PLUMED and GROMACS
+  shortitle: Hamiltonian rep...
+  path: lessons/22/010/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  doi: 10.1080/00268976.2013.824126
+  reference: "G. Bussi, Hamiltonian replica exchange in GROMACS: a flexible implementation. Molecular Physics 112, 379\u2013384 (2013)"
+  ref_url: http://dx.doi.org/10.1080/00268976.2013.824126
+  description: An introduction to running Hamiltonian replica exchange calculations using PLUMED and GROMACS.
+  tags: masterclass-2022
+  ninputs: 1
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/005
+  actions: MOLINFO TORSION PRINT
+  modules: generic colvar
+  time: 11.385931235999806
+- id: '22.001'
+  title: Funnel Metadynamics
+  shortitle: Funnel Metadyna...
+  path: lessons/22/001/data/NAVIGATION.html
+  instructors: Stefano Raniolo and Vittorio Limongelli
+  doi: 10.1038/s41596-020-0342-4
+  reference: "S. Raniolo, V. Limongelli, Ligand binding free-energy calculations with funnel metadynamics. Nature Protocols 15, 2837\u20132866 (2020)"
+  ref_url: http://dx.doi.org/10.1038/s41596-020-0342-4
+  description: An introduction to modelling ligand binding using funnel metadynamics
+  tags: masterclass-2022 Funnel Metadynamics ligand/target binding
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 14.560141203000057
+- id: '21.006'
+  title: Dimensionality reduction
+  shortitle: Dimensionality ...
+  path: lessons/21/006/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: 10.1063/1.2432340
+  reference: D. Branduardi, F. L. Gervasio, M. Parrinello, From A to B in free energy space. The Journal of Chemical Physics 126 (2007)
+  ref_url: http://dx.doi.org/10.1063/1.2432340
+  description: An introduction to techniques such as dimensionality reduction, path collective variables, and indistinguishability that you may need to use in your own research projects.
+  tags: masterclass-2021
+  ninputs: 11
+  nfail: 6
+  nfailm: 1
+  inputfails:
+    v2.9: 6
+    master: 1
+  depends:
+  - 21/001
+  actions: DUMPMULTICOLVAR COORDINATIONNUMBER DUMPVECTOR LANDMARK_SELECT_FPS PATH ALPHARMSD MORE_THAN PCA PCAVARS DUMPGRID HISTOGRAM PROJECT_POINTS PARABETARMSD COMMITTOR ANTIBETARMSD SKETCHMAP UNITS PRINT CLASSICAL_MDS DUMPPDB GROUP COLLECT_FRAMES RMSD MOLINFO
+    TORSION FCCUBIC
+  modules: symfunc dimred gridtools mapping multicolvar function core generic colvar secondarystructure landmarks setup
+  time: 65.49892046800005
+- id: '21.001'
+  title: PLUMED syntax and analysis
+  shortitle: PLUMED syntax a...
+  path: lessons/21/001/data/NAVIGATION.html
+  instructors: Max Bonomi
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: Basic features of the PLUMED input syntax with a particular focus on PBCs and selection tools
+  tags: masterclass-2021
+  ninputs: 7
+  nfail: 2
+  nfailm: 2
+  inputfails:
+    v2.9: 2
+    master: 2
+  depends:
+  - 20/001
+  actions: DISTANCE CENTER PARABETARMSD PRINT GYRATION COMBINE MOLINFO ALPHARMSD DUMPATOMS TORSION ANTIBETARMSD WHOLEMOLECULES
+  modules: function colvar generic secondarystructure vatom
+  time: 39.72766260200024
+- id: '20.001'
+  title: Installing PLUMED
+  shortitle: Installing PLUM...
+  path: lessons/20/001/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: An interactive tutorial resource on compiling PLUMED and linking it with MD codes.
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 28.90461555999991

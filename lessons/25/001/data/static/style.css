@@ -1,0 +1,224 @@
+/* Basic styles for layout and aesthetics */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.summary-container {
+    flex: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    
+}
+
+header {
+    position: relative;
+    background-color: #6b4f93;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li.title {
+    flex-grow: 1;
+    display: flex;
+    justify-content: left;
+}
+
+header nav ul li.title a {
+    font-size: 24px; 
+    font-weight: bold; 
+    text-decoration: none;
+}
+
+header nav ul li.social {
+    margin-left: 10px; 
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.main-content {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-box {
+    background-color: white;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Defining progress bar*/
+.progress-bar-container {
+    width: 80%;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    height: 30px;
+    width: 0%;
+    background-color: #6b4f9e;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    transition: width 0.5s ease;
+    
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(2, auto); /* Two rows */
+    gap: 5px;
+    max-width: 100%;
+    justify-items: center;
+}
+
+.grid-item {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Maintain image aspect ratio */
+    max-width: 800px; /* Set a max-width to control image size */
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; /*wrap text below slider */
+    align-items: center;
+    margin-bottom: 7px;
+    gap: 5px;
+}
+
+.description {
+    flex-basis: 100%; /*span full width of the flexed container */
+    background-color: #f2f2f2; /* Light grey background */
+    border-radius: 4px; /* Slightly rounded corners */
+    padding: 5px;
+
+    font-size: 0.9em;
+    margin-top: 2px;
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between sections */
+    gap: 20px; /* Add space between the sections */
+}
+
+section {
+    flex: 1; /* Make both sections take equal width */
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px; 
+    height: 17px; 
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 17px; 
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px; 
+    left: 2px; 
+    bottom: 2px; 
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #6b4f93;
+}
+
+input:checked + .slider:before {
+    transform: translateX(13px); 
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;               
+}
+
+#runScriptBtn {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #6b4f9e;    /* Custom color */
+    color: white;
+    cursor: pointer;
+}
+
+#runScriptBtn:hover {
+    background-color: #d35ed7;    /* Slightly darker hover color */
+}

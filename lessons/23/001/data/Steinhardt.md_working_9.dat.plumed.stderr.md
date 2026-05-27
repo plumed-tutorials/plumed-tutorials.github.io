@@ -1,0 +1,30 @@
+Stderr for source:  Steinhardt.md_working_9.dat   
+Download: [zipped raw stdout](Steinhardt.md_working_9.dat.plumed.stdout.txt.zip) - [zipped raw stderr](Steinhardt.md_working_9.dat.plumed.stderr.txt.zip) 
+{% raw %}
+<pre>
+#! Only the first 1000 rows of the error file are shown below
+#! To inspect the full error file, please download the zipped raw stderr file above
+terminate called after throwing an instance of 'PLMD::Plumed::ExceptionError'
+what():
+(core/PlumedMain.cpp:903) void PLMD::PlumedMain::readInputWords(const std::vector<std::__cxx11::basic_string<char> >&)
+ERROR
+I cannot understand line: Q1 LABEL=q1 SPECIES=1-100 SWITCH=RATIONAL D_0=2.0 R_0=1.0 VMEAN
+Maybe a missing space or a typo?
+[runnervmg397c:79775] *** Process received signal ***
+[runnervmg397c:79775] Signal: Aborted (6)
+[runnervmg397c:79775] Signal code:  (-6)
+[runnervmg397c:79775] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x45330)[0x7fcdeb245330]
+[runnervmg397c:79775] [ 1] /lib/x86_64-linux-gnu/libc.so.6(pthread_kill+0x11c)[0x7fcdeb29eb2c]
+[runnervmg397c:79775] [ 2] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x1e)[0x7fcdeb24527e]
+[runnervmg397c:79775] [ 3] /lib/x86_64-linux-gnu/libc.so.6(abort+0xdf)[0x7fcdeb2288ff]
+[runnervmg397c:79775] [ 4] /lib/x86_64-linux-gnu/libstdc++.so.6(+0xa5ff5)[0x7fcdeb6a5ff5]
+[runnervmg397c:79775] [ 5] /lib/x86_64-linux-gnu/libstdc++.so.6(+0xbb0da)[0x7fcdeb6bb0da]
+[runnervmg397c:79775] [ 6] /lib/x86_64-linux-gnu/libstdc++.so.6(_ZSt10unexpectedv+0x0)[0x7fcdeb6a5a55]
+[runnervmg397c:79775] [ 7] /lib/x86_64-linux-gnu/libstdc++.so.6(+0xa5a6f)[0x7fcdeb6a5a6f]
+[runnervmg397c:79775] [ 8] plumed(+0x13209)[0x56469d698209]
+[runnervmg397c:79775] [ 9] /lib/x86_64-linux-gnu/libc.so.6(+0x2a1ca)[0x7fcdeb22a1ca]
+[runnervmg397c:79775] [10] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x8b)[0x7fcdeb22a28b]
+[runnervmg397c:79775] [11] plumed(+0x134a5)[0x56469d6984a5]
+[runnervmg397c:79775] *** End of error message ***
+</pre>
+{% endraw %}

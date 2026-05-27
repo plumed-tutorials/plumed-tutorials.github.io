@@ -1,0 +1,82 @@
+# file containing lesson database.
+- id: '25.004'
+  title: An introduction to statistical mechanics for undergraduate students
+  shortitle: An introduction...
+  path: lessons/25/004/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: These are the resources that I provide to students at Queen's Unviersity Belfast for the third year course in statistical mechanics
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 12.462666820000095
+- id: '24.011'
+  title: Parameterization of Path CVs for drug-target binding
+  shortitle: Parameterizatio...
+  path: lessons/24/011/data/NAVIGATION.html
+  instructors: Mattia Bernetti and Matteo Masetti
+  doi: 10.1021/acs.jctc.9b00450
+  reference: "M. Bernetti, M. Masetti, M. Recanatini, R. E. Amaro, A. Cavalli, An Integrated Markov State Model and Path Metadynamics Approach To Characterize Drug Binding Processes. Journal of Chemical Theory and Computation 15, 5689\u20135702 (2019)"
+  ref_url: http://dx.doi.org/10.1021/acs.jctc.9b00450
+  description: Using path CVs to study drug target binding with metadynamics
+  tags: drug-target binding, Path CVs, metadynamics
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/001
+  - 21/004
+  actions: MOVINGRESTRAINT MOLINFO WHOLEMOLECULES UPPER_WALLS LOWER_WALLS DISTANCE PATHMSD PRINT METAD CENTER
+  modules: vatom colvar bias generic
+  time: 36.70065085500005
+- id: '23.001'
+  title: Developments in PLUMED
+  shortitle: Developments in...
+  path: lessons/23/001/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: A series of articles were I outline some development work that I have been doing with PLUMED over the last few years
+  ninputs: 89
+  nfail: 68
+  nfailm: 0
+  inputfails:
+    v2.9: 68
+    master: 0
+  actions: AVERAGE GATHER_REPLICAS SELECT_COMPONENTS DISPLACEMENT CONSTANT CUSTOM GET_VOLUME_ELEMENT DFSCLUSTERING TORSION DIFFERENCE Q6 LOCAL_Q1 LOCAL_AVERAGE DISTANCE CONCATENATE Q1 VOLUME MATRIX_PRODUCT OUTER_PRODUCT SUM INSPHERE REFERENCE_GRID SPHERICAL_HARMONIC
+    COORDINATIONNUMBER RMSD COM DISTANCES LOWEST FIXEDATOM PCAVARS POSITION RESTRAINT ACCUMULATE PDB2CONSTANT DIAGONALIZE SORT MORE_THAN MEAN ONES Q4 TRANSPOSE INTEGRATE_GRID BIASVALUE DUMPGRID MATRIX_VECTOR_PRODUCT GSYMFUNC_THREEBODY PAIRENTROPY GPATH CLUSTER_PROPERTIES
+    SPRINT DISTANCE_MATRIX EUCLIDEAN_DISTANCE LESS_THAN GEOMETRIC_PATH RMSD_VECTOR CONTACT_MATRIX GROUP COMBINE VSTACK KDE PATH RDF WHOLEMOLECULES HISTOGRAM DOMAIN_DECOMPOSITION INTERPOLATE_GRID PRINT CLUSTER_WEIGHTS CENTER
+  modules: clusters multicolvar mapping colvar adjmat symfunc valtools vatom refdist matrixtools function bias core generic volumes sprint gridtools
+  time: 419.2677125270002
+- id: '22.017'
+  title: A Bayesian approach to integrate cryo-EM data into MD simulations with PLUMED
+  shortitle: A Bayesian appr...
+  path: lessons/22/017/data/NAVIGATION.html
+  instructors: Samuel Hoff and Max Bonomi
+  doi: 10.1371/journal.pcbi.1012180
+  reference: S. E. Hoff, F. E. Thomasen, K. Lindorff-Larsen, M. Bonomi, Accurate model and ensemble refinement using cryo-electron microscopy maps and Bayesian inference. PLOS Computational Biology 20, e1012180 (2024)
+  ref_url: http://dx.doi.org/10.1371/journal.pcbi.1012180
+  description: How to use PLUMED to perform single-structure and ensemble refinement using cryo-EM maps and EMMIVox.
+  tags: masterclass-2022
+  ninputs: 2
+  nfail: 2
+  nfailm: 2
+  inputfails:
+    v2.9: 2
+    master: 2
+  depends:
+  - 21/001
+  actions: EMMIVOX BIASVALUE GROUP MOLINFO WHOLEMOLECULES PRINT
+  modules: isdb generic bias core
+  time: 16.11780508200036
