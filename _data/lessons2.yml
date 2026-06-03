@@ -1,0 +1,127 @@
+# file containing lesson database.
+- id: '24.013'
+  title: Permutationally Invariant Networks for Enhanced Sampling (PINES)
+  shortitle: Permutationally...
+  path: lessons/24/013/data/NAVIGATION.html
+  instructors: Nicholas S.M. Herringer, Aniruddha Seal, Armin Shayesteh Zadeh, Siva Dasetty, Andrew L. Ferguson
+  doi: 10.1021/acs.jctc.3c00923
+  reference: "N. S. M. Herringer, S. Dasetty, D. Gandhi, J. Lee, A. L. Ferguson, Permutationally Invariant Networks for Enhanced Sampling (PINES): Discovery of Multimolecular and Solvent-Inclusive Collective Variables. Journal of Chemical Theory and Computation\
+    \ 20, 178\u2013198 (2023)"
+  ref_url: http://dx.doi.org/10.1021/acs.jctc.3c00923
+  description: An introduction to using permutationally invariant networks for enhanced sampling
+  tags: Metadynamics, Permutationally invariant vectors, machine learning collective variable, parallel bias metadynamics
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/004
+  actions: ''
+  modules: ''
+  time: 5.03187935699998
+- id: '24.008'
+  title: Using the maze module
+  shortitle: Using the maze ...
+  path: lessons/24/008/data/NAVIGATION.html
+  instructors: Jakub Rydzewski
+  doi: 10.1063/1.5108638
+  reference: J. Rydzewski, O. Valsson, Finding multiple reaction pathways of ligand unbinding. The Journal of Chemical Physics 150 (2019)
+  ref_url: http://dx.doi.org/10.1063/1.5108638
+  description: Sampling ligand-protein dissociation using the maze module
+  tags: protein, ligand, dissociation, unbinding, maze
+  ninputs: 4
+  nfail: 2
+  nfailm: 2
+  inputfails:
+    v2.9: 2
+    master: 2
+  depends:
+  - 21/001
+  actions: CENTER DISTANCE COMMITTOR GROUP
+  modules: vatom colvar core generic
+  time: 29.486243503999958
+- id: '23.003'
+  title: Profiling, GPUs and PLUMED
+  shortitle: Profiling, GPUs...
+  path: lessons/23/003/data/NAVIGATION.html
+  instructors: Ketan Bhardwaj
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: A report based on some profiling work on PLUMED that has been performed by the SSEC
+  tags: developers, C++, profiling
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 1.971121499999981
+- id: '23.001'
+  title: Developments in PLUMED
+  shortitle: Developments in...
+  path: lessons/23/001/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: A series of articles were I outline some development work that I have been doing with PLUMED over the last few years
+  ninputs: 89
+  nfail: 68
+  nfailm: 0
+  inputfails:
+    v2.9: 68
+    master: 0
+  actions: DISTANCE_MATRIX INTERPOLATE_GRID COM DISTANCE BIASVALUE CENTER LOCAL_Q1 PCAVARS MATRIX_VECTOR_PRODUCT INSPHERE HISTOGRAM CONSTANT VOLUME MORE_THAN OUTER_PRODUCT COORDINATIONNUMBER SELECT_COMPONENTS DUMPGRID FIXEDATOM EUCLIDEAN_DISTANCE GSYMFUNC_THREEBODY
+    LESS_THAN AVERAGE INTEGRATE_GRID SPRINT REFERENCE_GRID RMSD_VECTOR MATRIX_PRODUCT SORT CLUSTER_WEIGHTS DOMAIN_DECOMPOSITION SUM DIAGONALIZE GATHER_REPLICAS PAIRENTROPY CONCATENATE ONES DFSCLUSTERING CLUSTER_PROPERTIES TRANSPOSE DISPLACEMENT DIFFERENCE TORSION
+    GET_VOLUME_ELEMENT SPHERICAL_HARMONIC MEAN RDF ACCUMULATE RMSD LOCAL_AVERAGE LOWEST CUSTOM CONTACT_MATRIX GPATH GEOMETRIC_PATH COMBINE RESTRAINT Q6 DISTANCES WHOLEMOLECULES Q1 PDB2CONSTANT PATH VSTACK POSITION PRINT KDE Q4 GROUP
+  modules: adjmat refdist sprint vatom volumes function core symfunc mapping colvar bias multicolvar valtools matrixtools clusters generic gridtools
+  time: 420.638430105
+- id: '21.005'
+  title: Replica exchange methods
+  shortitle: Replica exchang...
+  path: lessons/21/005/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  doi: 10.1016/S0009-2614(99)01123-9
+  reference: "Y. Sugita, Y. Okamoto, Replica-exchange molecular dynamics method for protein folding. Chemical Physics Letters 314, 141\u2013151 (1999)"
+  ref_url: http://dx.doi.org/10.1016/S0009-2614(99)01123-9
+  description: Running umbrella sampling with replica exchange, bias exchange metadynamics and parallel tempering metadynamics
+  tags: masterclass-2021
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/003
+  - 21/004
+  actions: METAD RESTRAINT TORSION MOLINFO PRINT RANDOM_EXCHANGES
+  modules: bias colvar generic
+  time: 20.33045466899989
+- id: '21.004'
+  title: Metadynamics
+  shortitle: Metadynamics
+  path: lessons/21/004/data/NAVIGATION.html
+  instructors: Max Bonomi
+  doi: 10.1073/pnas.202427399
+  reference: "A. Laio, M. Parrinello, Escaping free-energy minima. Proceedings of the National Academy of Sciences 99, 12562\u201312566 (2002)"
+  ref_url: http://dx.doi.org/10.1073/pnas.202427399
+  description: How to calculate statistical averages and free energy surfaces using metadynamics
+  tags: masterclass-2021
+  ninputs: 4
+  nfail: 0
+  nfailm: 1
+  inputfails:
+    v2.9: 0
+    master: 1
+  depends:
+  - 21/003
+  - 21/002
+  actions: REWEIGHT_BIAS METAD DUMPGRID TORSION CONVERT_TO_FES MOLINFO PRINT HISTOGRAM
+  modules: bias colvar generic gridtools
+  time: 25.975796885999898

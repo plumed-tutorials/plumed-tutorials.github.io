@@ -1,0 +1,291 @@
+# file containing lesson database.
+- id: '25.003'
+  title: Defining custom machine learning CV with metatomic
+  shortitle: Defining custom...
+  path: lessons/25/003/data/NAVIGATION.html
+  instructors: Guillaume Fraux, Rohit Goswami and Michele Ceriotti
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: An introduction to the use of interface between plumed and the metatomic library
+  ninputs: 1
+  nfail: 1
+  nfailm: 1
+  inputfails:
+    v2.9: 1
+    master: 1
+  depends:
+  - '21.001'
+  - '21.004'
+  actions: SELECT_COMPONENTS METATOMIC METAD
+  modules: valtools bias metatomic
+  time: 5.261248389000002
+- id: '24.015'
+  title: How to use the PLUMED PyCV plugin
+  shortitle: How to use the ...
+  path: lessons/24/015/data/NAVIGATION.html
+  instructors: Daniele Rapetti, Toni Giorgino
+  doi: 10.21105/joss.01773
+  reference: 'T. Giorgino, PYCV: a PLUMED 2 Module Enabling the Rapid Prototyping of Collective Variables in Python. Journal of Open Source Software 4, 1773 (2019)'
+  ref_url: http://dx.doi.org/10.21105/joss.01773
+  description: An introduction to the pycv module.  This module provides you with an action that allows you to call python from PLUMED.
+  tags: manual, python
+  ninputs: 7
+  nfail: 7
+  nfailm: 7
+  inputfails:
+    v2.9: 7
+    master: 7
+  actions: DISTANCE LOAD PRINT
+  modules: setup colvar generic
+  time: 28.21041512299996
+- id: '24.014'
+  title: Alpha-Fold Metainference for structural ensemble prediction of a partially disordered protein
+  shortitle: Alpha-Fold Meta...
+  path: lessons/24/014/data/NAVIGATION.html
+  instructors: Faidon Brotzakis, Hussein Murtada and Michele Vendruscolo
+  doi: 10.1101/2023.01.19.524720
+  reference: 'Z. F. Brotzakis, S. Zhang, M. Vendruscolo, AlphaFold Prediction of Structural Ensembles of Disordered Proteins. doi: 10.1101/2023.01.19.524720 (2023)'
+  ref_url: http://dx.doi.org/10.1101/2023.01.19.524720
+  description: A tutorial about how metainference can be used in tandem with Alpha-fold to predict the ensemble of structures for a partially disordered protein.
+  tags: Protein dynamics, AlphaFold2, Metainference, PB-MetaD, CALVADOS2, partially disordered proteins
+  ninputs: 2
+  nfail: 1
+  nfailm: 1
+  inputfails:
+    v2.9: 1
+    master: 1
+  depends:
+  - 21/001
+  actions: METAINFERENCE MOLINFO ENDPLUMED PRINT TORSION WHOLEMOLECULES PBMETAD CENTER UPPER_WALLS RMSD CONTACTMAP GYRATION CONSTANT FLUSH
+  modules: isdb generic vatom bias colvar
+  time: 13.486668450000025
+- id: '24.005'
+  title: Path integral metadynamics
+  shortitle: Path integral m...
+  path: lessons/24/005/data/NAVIGATION.html
+  instructors: Guillaume Fraux and Michele Ceriotti
+  doi: 10.1063/5.0215869
+  reference: "Y. Litman, V. Kapil, Y. M. Y. Feldman, D. Tisi, T. Begu\u0161i\u0107, K. Fidanyan, G. Fraux, J. Higer, M. Kellner, T. E. Li, E. S. P\xF3s, E. Stocco, G. Trenins, B. Hirshberg, M. Rossi, M. Ceriotti, i-PI 3.0: A flexible and efficient framework\
+    \ for advanced atomistic simulations. The Journal of Chemical Physics 161 (2024)"
+  ref_url: http://dx.doi.org/10.1063/5.0215869
+  description: Incorporating nuclear quantum effects in metadynamics simulations using path integrals
+  tags: Metadynamics, path integrals, nuclear quantum effects
+  ninputs: 1
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - '21.001'
+  - '21.004'
+  actions: COMBINE LESS_THAN DISTANCE SUM PRINT METAD UPPER_WALLS DISTANCES FLUSH
+  modules: function generic bias colvar multicolvar
+  time: 7.1838818239998545
+- id: '23.004'
+  title: Rewriting coordination CVs in CUDA
+  shortitle: Rewriting coord...
+  path: lessons/23/004/data/NAVIGATION.html
+  instructors: Daniele Rapetti
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: How to implement a basic version of the coordination CV with CUDA
+  tags: developers, C++, parallelism, Cuda
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 11.511249900999928
+- id: '23.002'
+  title: Introduction to the PLUMED parallel features for developers
+  shortitle: Introduction to...
+  path: lessons/23/002/data/NAVIGATION.html
+  instructors: Daniele Rapetti
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: A simple presentation of some of the available features in PLUMED to simplify the interface with OpenMP and MPI. The lesson contains also a very simple example of how to implement a CV with CUDA.
+  tags: developers, C++, parallelism
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 9.867426381000087
+- id: '22.013'
+  title: SASA module - The solvent accessible surface area of proteins as a collective variable, and the application of PLUMED for implicit solvent simulations
+  shortitle: SASA module - T...
+  path: lessons/22/013/data/NAVIGATION.html
+  instructors: Andrea Arsiccio
+  doi: 10.1021/acs.jpcb.2c00889
+  reference: "A. Arsiccio, P. Ganguly, J.-E. Shea, A Transfer Free Energy Based Implicit Solvent Model for Protein Simulations in Solvent Mixtures: Urea-Induced Denaturation as a Case Study. The Journal of Physical Chemistry B 126, 4472\u20134482 (2022)"
+  ref_url: http://dx.doi.org/10.1021/acs.jpcb.2c00889
+  description: An introduction to the SASA module and a description of how PLUMED can be used for implicit solvent simulations.
+  tags: masterclass-2022
+  ninputs: 4
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/001
+  - 21/004
+  actions: LESS_THAN CUSTOM ANTIBETARMSD MOLINFO DISTANCE PARABETARMSD LOWEST PRINT SUM BIASVALUE SASA_HASEL ALPHARMSD GYRATION SECONDARY_STRUCTURE_DRMSD
+  modules: function generic sasa bias colvar secondarystructure
+  time: 23.17713156900004
+- id: '22.011'
+  title: Variationally Enhanced Sampling
+  shortitle: Variationally E...
+  path: lessons/22/011/data/NAVIGATION.html
+  instructors: Omar Valsson
+  doi: 10.1021/acs.jctc.2c00197
+  reference: "B. Pampel, O. Valsson, Improving the Efficiency of Variationally Enhanced Sampling with Wavelet-Based Bias Potentials. Journal of Chemical Theory and Computation 18, 4127\u20134141 (2022)"
+  ref_url: http://dx.doi.org/10.1021/acs.jctc.2c00197
+  description: An introduction to running Variationally Enhanced Sampling (VES) using PLUMED.
+  tags: masterclass-2022 Variationally Enhanced Sampling VES
+  ninputs: 14
+  nfail: 2
+  nfailm: 2
+  inputfails:
+    v2.9: 2
+    master: 2
+  actions: OPT_AVERAGED_SGD TD_UNIFORM VES_LINEAR_EXPANSION DUMPGRID COORDINATION DISTANCE BF_LEGENDRE PRINT REWEIGHT_BIAS BF_WAVELETS UPPER_WALLS READ CONVERT_TO_FES HISTOGRAM TD_WELLTEMPERED
+  modules: generic ves gridtools bias colvar
+  time: 90.9898678510001
+- id: '22.010'
+  title: Hamiltonian replica exchange with PLUMED and GROMACS
+  shortitle: Hamiltonian rep...
+  path: lessons/22/010/data/NAVIGATION.html
+  instructors: Giovanni Bussi
+  doi: 10.1080/00268976.2013.824126
+  reference: "G. Bussi, Hamiltonian replica exchange in GROMACS: a flexible implementation. Molecular Physics 112, 379\u2013384 (2013)"
+  ref_url: http://dx.doi.org/10.1080/00268976.2013.824126
+  description: An introduction to running Hamiltonian replica exchange calculations using PLUMED and GROMACS.
+  tags: masterclass-2022
+  ninputs: 1
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/005
+  actions: MOLINFO TORSION PRINT
+  modules: colvar generic
+  time: 10.995144575999802
+- id: '22.009'
+  title: Using path collective variables to find reaction mechanisms in complex free energy landscapes
+  shortitle: Using path coll...
+  path: lessons/22/009/data/NAVIGATION.html
+  instructors: Bernd Ensing
+  doi: 10.1103/PhysRevLett.109.020601
+  reference: "G. D\xEDaz Leines, B. Ensing, Path Finding on High-Dimensional Free Energy Landscapes. Physical Review Letters 109 (2012)"
+  ref_url: http://dx.doi.org/10.1103/PhysRevLett.109.020601
+  description: An introduction to using path collective variables for describing and simulating activated molecular processes
+  tags: masterclass-2022
+  ninputs: 1
+  nfail: 1
+  nfailm: 1
+  inputfails:
+    v2.9: 1
+    master: 1
+  depends:
+  - 21/001
+  actions: LOWER_WALLS DISTANCE PRINT UNITS METAD UPPER_WALLS
+  modules: generic bias colvar setup
+  time: 9.278824875000055
+- id: '22.007'
+  title: Learning and enhancing fluctuations along information bottleneck for automated enhanced sampling
+  shortitle: Learning and en...
+  path: lessons/22/007/data/NAVIGATION.html
+  instructors: Pratyush Tiwary
+  doi: 10.1021/acs.jctc.2c00058
+  reference: "S. Mehdi, D. Wang, S. Pant, P. Tiwary, Accelerating All-Atom Simulations and Gaining Mechanistic Understanding of Biophysical Systems through State Predictive Information Bottleneck. Journal of Chemical Theory and Computation 18, 3231\u20133238\
+    \ (2022)"
+  ref_url: http://dx.doi.org/10.1021/acs.jctc.2c00058
+  description: An introduction to the state predictive information bottleneck (SPIB) deep-learning-based framework for learning reaction coordinates from high dimensional molecular simulation trajectories.
+  tags: masterclass-2022
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 8.03463198899999
+- id: '22.003'
+  title: Rethinking Metadynamics using the OPES method
+  shortitle: Rethinking Meta...
+  path: lessons/22/003/data/NAVIGATION.html
+  instructors: Michele Invernizzi
+  doi: 10.1021/acs.jpclett.0c00497
+  reference: "M. Invernizzi, M. Parrinello, Rethinking Metadynamics: From Bias Potentials to Probability Distributions. The Journal of Physical Chemistry Letters 11, 2731\u20132736 (2020)"
+  ref_url: http://dx.doi.org/10.1021/acs.jpclett.0c00497
+  description: An introduction to the On-the-fly Probability Enhanced Sampling method
+  tags: masterclass-2022
+  ninputs: 5
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/003
+  - 21/004
+  actions: OPES_EXPANDED OPES_METAD_EXPLORE ECV_MULTITHERMAL TORSION ECV_UMBRELLAS_LINE OPES_METAD ENERGY
+  modules: opes colvar
+  time: 34.63748244299995
+- id: '22.002'
+  title: Analysis of PLUMED output by Metadynminer
+  shortitle: Analysis of PLU...
+  path: lessons/22/002/data/NAVIGATION.html
+  instructors: Vojtech Spiwok
+  doi: 10.32614/RJ-2022-057
+  reference: "D. Trapl, V. Spiwok, Analysis of the Results of Metadynamics Simulations by metadynminer and metadynminer3d. The R Journal 14, 46\u201358 (2022)"
+  ref_url: http://dx.doi.org/10.32614/RJ-2022-057
+  description: An introduction to the R package Metadynminer which can be used to analyse the output from metadynamics simulations
+  tags: masterclass-2022
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/004
+  actions: ''
+  modules: ''
+  time: 4.606518434999998
+- id: '21.006'
+  title: Dimensionality reduction
+  shortitle: Dimensionality ...
+  path: lessons/21/006/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: 10.1063/1.2432340
+  reference: D. Branduardi, F. L. Gervasio, M. Parrinello, From A to B in free energy space. The Journal of Chemical Physics 126 (2007)
+  ref_url: http://dx.doi.org/10.1063/1.2432340
+  description: An introduction to techniques such as dimensionality reduction, path collective variables, and indistinguishability that you may need to use in your own research projects.
+  tags: masterclass-2021
+  ninputs: 11
+  nfail: 6
+  nfailm: 1
+  inputfails:
+    v2.9: 6
+    master: 1
+  depends:
+  - 21/001
+  actions: CLASSICAL_MDS DUMPGRID MORE_THAN ANTIBETARMSD GROUP PCAVARS PCA COORDINATIONNUMBER PROJECT_POINTS SKETCHMAP COMMITTOR ALPHARMSD LANDMARK_SELECT_FPS MOLINFO PARABETARMSD TORSION PRINT DUMPMULTICOLVAR FCCUBIC DUMPPDB COLLECT_FRAMES DUMPVECTOR UNITS
+    RMSD HISTOGRAM PATH
+  modules: function setup symfunc landmarks mapping generic core gridtools dimred colvar secondarystructure multicolvar
+  time: 61.636934149000126

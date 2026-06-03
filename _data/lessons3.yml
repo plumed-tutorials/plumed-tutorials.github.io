@@ -1,0 +1,274 @@
+# file containing lesson database.
+- id: '25.001'
+  title: VisMetaDynamics
+  shortitle: VisMetaDynamics
+  path: lessons/25/001/data/NAVIGATION.html
+  instructors: Christian Phillips
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: A graphical tool that allows you to visually inspect how the free energy surface for a metadynamics simulation is affected by the choice of hyperparameters
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/004
+  actions: ''
+  modules: ''
+  time: 5.238148145999958
+- id: '24.020'
+  title: An introduction to CpH-Metadynamics simulations
+  shortitle: An introduction...
+  path: lessons/24/020/data/NAVIGATION.html
+  instructors: Tomas Silva
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: This tutorial aims to train users to perform CpH-Metadynamics simulations using the stochastic titration constant-pH Molecular Dynamics method and PLUMED.
+  tags: RNA, Constant pH
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - '21.004'
+  actions: ''
+  modules: ''
+  time: 13.878155994999815
+- id: '24.011'
+  title: Parameterization of Path CVs for drug-target binding
+  shortitle: Parameterizatio...
+  path: lessons/24/011/data/NAVIGATION.html
+  instructors: Mattia Bernetti and Matteo Masetti
+  doi: 10.1021/acs.jctc.9b00450
+  reference: "M. Bernetti, M. Masetti, M. Recanatini, R. E. Amaro, A. Cavalli, An Integrated Markov State Model and Path Metadynamics Approach To Characterize Drug Binding Processes. Journal of Chemical Theory and Computation 15, 5689\u20135702 (2019)"
+  ref_url: http://dx.doi.org/10.1021/acs.jctc.9b00450
+  description: Using path CVs to study drug target binding with metadynamics
+  tags: drug-target binding, Path CVs, metadynamics
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/001
+  - 21/004
+  actions: PRINT WHOLEMOLECULES DISTANCE MOVINGRESTRAINT MOLINFO PATHMSD LOWER_WALLS METAD UPPER_WALLS CENTER
+  modules: bias colvar generic vatom
+  time: 32.94636037100008
+- id: '24.009'
+  title: Multiple Walkers Metadynamics Simulations with a Reactive Machine Learning Interatomic Potential
+  shortitle: Multiple Walker...
+  path: lessons/24/009/data/NAVIGATION.html
+  instructors: Kam-Tung Chan and Davide Donadio
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: Running metadynamics with a reactive, machine-learning interaction potential
+  tags: metadynamics, nitrate anion, machine learning interatomic potential
+  ninputs: 3
+  nfail: 0
+  nfailm: 3
+  inputfails:
+    v2.9: 0
+    master: 3
+  depends:
+  - 21/001
+  - 21/002
+  - 21/004
+  actions: UNITS DISTANCE PRINT GROUP DUMPGRID READ CUSTOM REWEIGHT_METAD METAD FLUSH HISTOGRAM UPPER_WALLS COORDINATION ANGLE HBOND_MATRIX
+  modules: colvar function bias core generic gridtools adjmat setup
+  time: 21.6275625090002
+- id: '24.007'
+  title: Transition-Tempered Metadynamics
+  shortitle: Transition-Temp...
+  path: lessons/24/007/data/NAVIGATION.html
+  instructors: Jiangbo Wu and Gregory A. Voth
+  doi: 10.1021/ct500441q
+  reference: "J. F. Dama, G. Rotskoff, M. Parrinello, G. A. Voth, Transition-Tempered Metadynamics: Robust, Convergent Metadynamics via On-the-Fly Transition Barrier Estimation. Journal of Chemical Theory and Computation 10, 3626\u20133633 (2014)"
+  ref_url: http://dx.doi.org/10.1021/ct500441q
+  description: An introduction to the transition tempered metadynamics method
+  tags: metadynamics, free energy sampling, reaction mechanism
+  ninputs: 3
+  nfail: 2
+  nfailm: 2
+  inputfails:
+    v2.9: 2
+    master: 2
+  depends:
+  - 21/004
+  actions: PRINT WHOLEMOLECULES UNITS DISTANCE GROUP EXTENDED_LAGRANGIAN RESTRAINT MOLINFO TORSION LOWER_WALLS METAD RESTART COM UPPER_WALLS COORDINATION FLUSH
+  modules: colvar bias core generic vatom setup
+  time: 21.00147377899998
+- id: '24.006'
+  title: Standard binding free energies from cylindrical restraints
+  shortitle: Standard bindin...
+  path: lessons/24/006/data/NAVIGATION.html
+  instructors: Blake I Armstrong, Paolo Raiteri and Julian D Gale
+  doi: 10.1021/acs.jpcc.3c02864
+  reference: "B. I. Armstrong, A. Silvestri, M. De La Pierre, P. Raiteri, J. D. Gale, Determining the Complete Stability of Calcite Kink Sites: Real vs Ideal. The Journal of Physical Chemistry C 127, 13958\u201313968 (2023)"
+  ref_url: http://dx.doi.org/10.1021/acs.jpcc.3c02864
+  description: Calculating standard binding free energies with metadynamics, PLUMED and OpenMM
+  tags: metadynamics, surface binding, cylindrical restraint, standard state, volume correction, multiple-walkers
+  ninputs: 9
+  nfail: 1
+  nfailm: 1
+  inputfails:
+    v2.9: 1
+    master: 1
+  depends:
+  - 21/004
+  actions: UNITS DISTANCE PRINT FIXEDATOM BIASVALUE CUSTOM LOWER_WALLS METAD RESTART UPPER_WALLS FLUSH
+  modules: colvar function bias generic vatom setup
+  time: 124.12212632
+- id: '24.004'
+  title: Volume-based Metadynamics
+  shortitle: Volume-based Me...
+  path: lessons/24/004/data/NAVIGATION.html
+  instructors: Riccardo Capelli
+  doi: 10.1021/acs.jpclett.9b01183
+  reference: "R. Capelli, P. Carloni, M. Parrinello, Exhaustive Search of Ligand Binding Pathways via Volume-Based Metadynamics. The Journal of Physical Chemistry Letters 10, 3495\u20133499 (2019)"
+  ref_url: http://dx.doi.org/10.1021/acs.jpclett.9b01183
+  description: This tutorial teaches you how to run free energy calculations to investigate protein-ligand binding
+  tags: Metadynamics, protein-ligand binding, free energy calculations
+  ninputs: 17
+  nfail: 0
+  nfailm: 3
+  inputfails:
+    v2.9: 0
+    master: 3
+  depends:
+  - 21/001
+  - 21/004
+  actions: GROUP CONVERT_TO_FES REWEIGHT_BIAS PRINT FIT_TO_TEMPLATE RESTRAINT READ WRAPAROUND POSITION HISTOGRAM COM COORDINATION WHOLEMOLECULES DUMPGRID RMSD MATHEVAL METAD UPPER_WALLS FLUSH
+  modules: colvar function bias core generic vatom gridtools
+  time: 86.12997877999987
+- id: '22.017'
+  title: A Bayesian approach to integrate cryo-EM data into MD simulations with PLUMED
+  shortitle: A Bayesian appr...
+  path: lessons/22/017/data/NAVIGATION.html
+  instructors: Samuel Hoff and Max Bonomi
+  doi: 10.1371/journal.pcbi.1012180
+  reference: S. E. Hoff, F. E. Thomasen, K. Lindorff-Larsen, M. Bonomi, Accurate model and ensemble refinement using cryo-electron microscopy maps and Bayesian inference. PLOS Computational Biology 20, e1012180 (2024)
+  ref_url: http://dx.doi.org/10.1371/journal.pcbi.1012180
+  description: How to use PLUMED to perform single-structure and ensemble refinement using cryo-EM maps and EMMIVox.
+  tags: masterclass-2022
+  ninputs: 2
+  nfail: 2
+  nfailm: 2
+  inputfails:
+    v2.9: 2
+    master: 2
+  depends:
+  - 21/001
+  actions: PRINT WHOLEMOLECULES GROUP BIASVALUE MOLINFO EMMIVOX
+  modules: bias core isdb generic
+  time: 14.896025333000125
+- id: '22.015'
+  title: Mechanical pulling + FISST module
+  shortitle: Mechanical pull...
+  path: lessons/22/015/data/NAVIGATION.html
+  instructors: Guillaume Stirnemann and Glen Hocky
+  doi: 10.1063/5.0009280
+  reference: M. J. Hartmann, Y. Singh, E. Vanden-Eijnden, G. M. Hocky, Infinite switch simulated tempering in force (FISST). The Journal of Chemical Physics 152 (2020)
+  ref_url: http://dx.doi.org/10.1063/5.0009280
+  description: This tutorial explains how mechanical forces can be modeled using PLUMED and the FISST module
+  tags: masterclass-2022
+  ninputs: 3
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  depends:
+  - 21/001
+  actions: UNITS DISTANCE PRINT RESTRAINT DUMPATOMS BIASVALUE MATHEVAL METAD FISST
+  modules: colvar fisst function bias generic setup
+  time: 42.671610353999995
+- id: '22.012'
+  title: Free energy calculations in crystalline solids
+  shortitle: Free energy cal...
+  path: lessons/22/012/data/NAVIGATION.html
+  instructors: Pablo Piaggi
+  doi: 10.1063/1.5102104
+  reference: P. M. Piaggi, M. Parrinello, Calculation of phase diagrams in the multithermal-multibaric ensemble. The Journal of Chemical Physics 150 (2019)
+  ref_url: http://dx.doi.org/10.1063/1.5102104
+  description: An introduction to the Environmental similarity CV and the calculation of chemical potentials of liquids and solids
+  tags: masterclass-2022
+  ninputs: 8
+  nfail: 5
+  nfailm: 5
+  inputfails:
+    v2.9: 5
+    master: 5
+  depends:
+  - 21/001
+  - 21/004
+  - 22/003
+  actions: MORE_THAN GROUP DUMPGRID ONES DISTANCE_MATRIX ENVIRONMENTSIMILARITY MATRIX_VECTOR_PRODUCT MEAN CUSTOM LOWER_WALLS MATHEVAL HISTOGRAM SUM UPPER_WALLS Q6 OPES_METAD
+  modules: matrixtools opes symfunc function bias envsim core generic gridtools adjmat
+  time: 36.534606779999876
+- id: '22.008'
+  title: Modelling Concentration-driven processes with PLUMED
+  shortitle: Modelling Conce...
+  path: lessons/22/008/data/NAVIGATION.html
+  instructors: Matteo Salvalaglio
+  doi: 10.1063/1.4917200
+  reference: C. Perego, M. Salvalaglio, M. Parrinello, Molecular dynamics simulations of solutions at constant chemical potential. The Journal of Chemical Physics 142 (2015)
+  ref_url: http://dx.doi.org/10.1063/1.4917200
+  description: An introduction to the tools that are available in PLUMED for simulating concentration-driven processes such as nucleation, growth and diffusion.
+  tags: masterclass-2022
+  ninputs: 4
+  nfail: 3
+  nfailm: 3
+  inputfails:
+    v2.9: 3
+    master: 3
+  depends:
+  - 21/001
+  actions: PRINT CLUSTER_NATOMS MORE_THAN GROUP ONES RESTRAINT MATRIX_VECTOR_PRODUCT DFSCLUSTERING SUM COORDINATIONNUMBER CLUSTER_DISTRIBUTION CONTACT_MATRIX FLUSH
+  modules: matrixtools clusters symfunc function bias core generic adjmat
+  time: 31.77346130700016
+- id: '22.001'
+  title: Funnel Metadynamics
+  shortitle: Funnel Metadyna...
+  path: lessons/22/001/data/NAVIGATION.html
+  instructors: Stefano Raniolo and Vittorio Limongelli
+  doi: 10.1038/s41596-020-0342-4
+  reference: "S. Raniolo, V. Limongelli, Ligand binding free-energy calculations with funnel metadynamics. Nature Protocols 15, 2837\u20132866 (2020)"
+  ref_url: http://dx.doi.org/10.1038/s41596-020-0342-4
+  description: An introduction to modelling ligand binding using funnel metadynamics
+  tags: masterclass-2022 Funnel Metadynamics ligand/target binding
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 14.568202496999902
+- id: '20.001'
+  title: Installing PLUMED
+  shortitle: Installing PLUM...
+  path: lessons/20/001/data/NAVIGATION.html
+  instructors: Gareth Tribello
+  doi: unpublished
+  reference: unpublished
+  ref_url: ''
+  description: An interactive tutorial resource on compiling PLUMED and linking it with MD codes.
+  ninputs: 0
+  nfail: 0
+  nfailm: 0
+  inputfails:
+    v2.9: 0
+    master: 0
+  actions: ''
+  modules: ''
+  time: 26.75276778700004
